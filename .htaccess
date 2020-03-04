@@ -1,0 +1,17 @@
+# HTID:12746335: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:12746335:
+
+#ErrorDocument 400 /error/bad-request.html
+#ErrorDocument 401 /error/unauthorised.html
+#ErrorDocument 403 /error/forbidden.html
+#ErrorDocument 404 /error/file-not-found.html
+#ErrorDocument 500 /error/internal-server-error.html
+
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^https://questmode.000webhostapp.com/$ [NC]
+RewriteRule ^/?$ /index.php [L,QSA]
