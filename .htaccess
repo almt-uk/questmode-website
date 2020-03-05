@@ -15,3 +15,10 @@ RewriteBase /
 
 RewriteCond %{HTTP_HOST} ^https://questmode.000webhostapp.com/$ [NC]
 RewriteRule ^/?$ /index.php [L,QSA]
+RewriteRule ^q/(?!create)((?!(.*[._]){2,})[a-z][a-z0-9._]{0,100}[a-z0-9](?!\S))(?!.)*$ quizz/waiting.php?quizzID=$1 [L,QSA]
+RewriteRule ^q/(create)*$ quizz/create.php [L,QSA]
+RewriteRule ^(create)*$ quizz/create.php [L,QSA]
+RewriteRule ^p/((?!(.*[._]){2,})[a-z][a-z0-9._]{0,100}[a-z0-9](?!\S))(?!.)*$ profile/profile.php?username=$1 [L,QSA]
+RewriteRule ^t/(manage)*$ teacher/manage.php [L,QSA]
+RewriteRule ^(manage)*$ teacher/manage.php [L,QSA]
+RewriteRule ^.*$ / [L,QSA]
