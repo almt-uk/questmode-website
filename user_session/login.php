@@ -311,13 +311,14 @@ echo '<input class="inputHolder" id="quizzCode" placeholder=" " type="password" 
 echo '<span>Password</span>';
 echo '</label>';
 echo '</div>';
-echo '<div class="toolbarUserSessionLogIn">';
+echo '<div class="toolbarUserSessionLogIn" onClick="tryLogin();" name="login">';
 echo 'Log In';
 echo '</div>';
 echo '<div class="forgotPassword">';
 echo 'Forgotten your details? <b><a href="help_sign_in.html">Get help signing in.</a></b>';
 echo '</div>';
 echo '</div>';
+echo '</form>';
 echo '</div>';
 echo '';
 echo '<div id="myCookieConsent">';
