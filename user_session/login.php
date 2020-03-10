@@ -13,9 +13,9 @@
         $loginUser=$db->loginUser($emailData, $passwordData);
         if(!$loginUser["error"])
         {
-            $_SESSION["loggedin"] = true;
-            $_SESSION["userData"] = $loginUser["userData"];
-            header("Location: /");
+            $_COOKIE["loggedin"] = true;
+            $_COOKIE["userData"] = $loginUser["userData"];
+            header("Location: ../index.php");
         }
         else
         {
