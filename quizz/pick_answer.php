@@ -171,6 +171,9 @@ echo 'color: rgba(0, 0, 0);';
 echo '}';
 echo '</style>';
 echo '</head>';
+?>
+
+<?php
 echo '<body>';
 echo '<div class="contentHolder">';
 echo '<div class="imageHolder" id="imageHolder">';
