@@ -2,7 +2,7 @@
   session_start();
   if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
-      header("Location: ../index.php");
+      header("Location: ../");
       exit;
   }
   $path = $_SERVER['DOCUMENT_ROOT'];
@@ -20,7 +20,7 @@
         {
             $_SESSION["isLoggedIn"] = true;
             $_SESSION["userData"] = $loginUser["userData"];
-            header("Location: ../index.php");
+            header("Refresh:0");
             exit;
         }
         else
@@ -297,7 +297,7 @@ echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goRegister() {';
-echo 'window.location = "sign_up";';
+echo 'window.location = "signup";';
 echo '}';
 echo '</script>';
 echo '</div>';
