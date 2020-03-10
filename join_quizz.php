@@ -214,7 +214,7 @@ echo 'document.getElementById("quizzNickname").value = "";';
 echo 'window.open("quizz/waiting.html", "_self");';
 echo '}';
 echo '}';
-echo '$('#quizzNickname').keyup(function (e) {';
+echo '$("#quizzNickname").keyup(function (e) {';
 echo 'if (e.keyCode === 13) {';
 echo 'checkData();';
 echo '}';
