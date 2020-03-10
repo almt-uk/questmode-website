@@ -199,7 +199,7 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
-echo '<a href="../index.html">';
+echo '<a href="../">';
 echo '<div class="countdownHolder unselectable" id="countdownHolder">';
 echo '<div class="countdownTime" id="countdownTime">';
 echo 'Done';
