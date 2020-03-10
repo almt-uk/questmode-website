@@ -230,6 +230,9 @@ echo '';
 echo '</style>';
 echo '';
 echo '</head>';
+?>
+
+<?php
 echo '<body>';
 echo '';
 echo '<div class="toolbarHolder toolbarShadow unselectable" id="toolbar">';
