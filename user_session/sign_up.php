@@ -282,7 +282,7 @@ echo '<input class="inputHolder" id="quizzCode" placeholder=" " type="text" requ
 echo '<span>University</span>';
 echo '</label>';
 echo '</div>';
-echo '<div class="toolbarUserSessionSignUp" type="submit" name="login">';
+echo '<div class="toolbarUserSessionSignUp" onClick="javascript:parentNode.submit();" name="login">';
 echo 'Sign Up';
 echo '</div>';
 echo '</form>';
