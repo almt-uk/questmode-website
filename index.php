@@ -166,7 +166,8 @@ if(!$isLoggedIn)
 {
 echo '<div class="toolbarUserSessionHolder">';
 echo '<div class="toolbarUserSessionSignUp"';
-echo '<script type="text/javascript" language="javascript"> window.open("user_session/sign_up.html", "_self"); </script>';
+echo ' <script type="text/javascript" language="javascript"> window.open("user_session/sign_up.html", "_self"); </script>';
+echo '>"';
 echo 'Sign Up';
 echo '</div>';
 echo '<div class="toolbarUserSessionLogIn" onclick="window.open("user_session/log_in.html", "_self");">';
