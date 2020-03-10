@@ -112,7 +112,6 @@ echo '<script>';
 echo 'var time = 5;';
 echo 'document.getElementById("countdownTime").innerHTML = time + "s";';
 echo 'setInterval(function() {';
-echo '// Display the result in the element with id="demo"';
 echo 'time--;';
 echo 'if(time == 0)';
 echo '{';
