@@ -1,5 +1,4 @@
 <?php
-
   session_start();
   if(isset($_POST['logout']))
   {
@@ -9,7 +8,6 @@
     header("Refresh:0");
     exit;
   }
-
 ?>
 
 <?php
