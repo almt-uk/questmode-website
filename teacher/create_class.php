@@ -173,14 +173,6 @@ echo '<div class="titleToolbar" onclick="window.open('../index.html', '_self');"
 echo 'Quest Mode';
 echo '</div>';
 echo '</div>';
-echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick="window.open('../user_session/sign_up.html', '_self');">';
-echo 'Sign Up';
-echo '</div>';
-echo '<div class="toolbarUserSessionLogIn" onclick="window.open('../user_session/log_in.html', '_self');">';
-echo 'Log In';
-echo '</div>';
-echo '</div>';
 echo '<!-- <div class="userLoggedInHolder">';
 echo '<img class="userLoggedInPicture" src="https://firebasestorage.googleapis.com/v0/b/zeo-flow.appspot.com/o/ProfilePicturesLowQ%2F6jk6xzpHdrwB4kqok4xFDy2HrfobqKJeWRgOE470158261189.jpeg?alt=media" />';
 echo '</div> -->';
