@@ -178,7 +178,7 @@ echo '</head>';
 echo '<body>';
 echo '<div class="toolbarHolder toolbarShadow unselectable" id="toolbar">';
 echo '<div class="toolbarContent">';
-echo '<div class="titleToolbar" onclick="window.open('../index.html', '_self');">';
+echo '<div class="titleToolbar" onclick="goHome();">';
 echo 'Quest Mode';
 echo '</div>';
 echo '<script type="text/javascript">';
