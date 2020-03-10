@@ -2,8 +2,8 @@
   session_start();
   if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
-      header("Location: ../");
-      exit;
+    echo 'javascript:window.location = "../";';
+    exit;
   }
   $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['register']) && $_POST['register']) {
@@ -20,7 +20,7 @@
         {
             $_SESSION["isLoggedIn"] = true;
             $_SESSION["userData"] = $loginUser["userData"];
-            header("Location: ../");
+            echo 'javascript:window.location = "../";';
             
         }
         exit;
