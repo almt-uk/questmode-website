@@ -318,10 +318,13 @@ echo '</script>';
 ?>
 
 <?php
+if(!$isLoggedIn)
+{
 echo '<script>';
 echo 'var toolbarUserSessionSignUp = document.getElementById("toolbarUserSessionSignUp");';
 echo 'toolbarUserSessionSignUp.addEventListener("click", function() {';
 echo 'document.location.href = ' . "user_session/sign_up.html";
 echo '});';
 echo '</script>';
+}
 ?>
