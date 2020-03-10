@@ -20,6 +20,9 @@ echo '<link rel="stylesheet" href="../assets/style/material.css" type="text/css"
 echo '<link rel="stylesheet" href="../assets/style/toolbar.css" type="text/css">';
 echo '<script src="../assets/script/cookieConsent.js" type="text/javascript"></script>';
 echo '<style>';
+echo 'img[alt="www.000webhost.com"] {';
+echo 'display: none !important;';
+echo '}';
 echo '/* colors */';
 echo ':root {';
 echo '--pure-material-primary-rgb: 85, 8, 194;';
