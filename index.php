@@ -180,7 +180,6 @@ echo '<img class="userLoggedInPicture" src="https://firebasestorage.googleapis.c
 echo '</div>';
 }
 echo '</div>';
-echo '';
 echo '<div class="userLoggedInDetails hideElement" id="userLoggedInDetails">';
 echo '<div class="userLoggedInDetailsHolder unselectable">';
 echo '<div class="userLoggedInCover">';
