@@ -2,8 +2,7 @@
   session_start();
   if(isset($_COOKIE["userData"]))
   {
-      echo $_COOKIE["userData"];
-      return header("Location: ../index.php");
+      header("Location: ../index.php");
       exit;
   }
   $path = $_SERVER['DOCUMENT_ROOT'];
