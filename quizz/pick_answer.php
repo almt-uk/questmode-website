@@ -239,7 +239,6 @@ echo 'var time = 12;';
 echo 'var choice = 0;';
 echo 'document.getElementById("countdownTime").innerHTML = time + "s";';
 echo 'setInterval(function() {';
-echo '// Display the result in the element with id="demo"';
 echo 'time--;';
 echo 'var countdownHolder = document.getElementById("countdownHolder");';
 echo 'var countdown = document.getElementById("countdownTime");';
