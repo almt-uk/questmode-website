@@ -38,6 +38,9 @@ echo '<link rel="stylesheet" href="../assets/style/material.css" type="text/css"
 echo '<script src="../assets/script/cookieConsent.js" type="text/javascript"></script>';
 echo '';
 echo '<style>';
+echo 'img[alt="www.000webhost.com"] {';
+echo 'display: none !important;';
+echo '}';
 echo '/* colors */';
 echo ':root {';
 echo '--pure-material-primary-rgb: 85, 8, 194;';
