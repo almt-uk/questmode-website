@@ -320,7 +320,6 @@ echo '</div>';
 echo '</body>';
 echo '<script>';
 echo 'document.body.addEventListener("click", function (evt) {';
-echo '//note evt.target can be a nested element, not the body element, resulting in misfires';
 echo 'var userLoggedInDetails = document.getElementById("userLoggedInDetails");';
 echo 'if(userLoggedInDetails != null)';
 echo '{';
