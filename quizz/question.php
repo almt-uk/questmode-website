@@ -90,6 +90,9 @@ echo 'font-size: 40px;';
 echo 'color: rgb(255, 255, 255);';
 echo '}';
 echo '</style>';
+?>
+
+<?php
 echo '</head>';
 echo '<body>';
 echo '<div class="contentHolder unselectable">';
