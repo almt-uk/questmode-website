@@ -193,7 +193,7 @@ echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goRegister() {';
-echo 'window.location = "signup";';
+echo 'window.location = "../signup";';
 echo '}';
 echo '</script>';
 echo '<div class="toolbarUserSessionLogIn" onclick="window.open('../user_session/log_in.html', '_self');">';
