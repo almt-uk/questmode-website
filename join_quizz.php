@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
   {
     header("Location: /",  true);
     exit;
