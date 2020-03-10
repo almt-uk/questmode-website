@@ -15,9 +15,7 @@
 <?php
 echo '<script language="javascript" type="text/javascript">';
 echo 'function popitup(url) {';
-echo 'newwindow=window.open(url,'name','height=400,width=600');';
-echo 'if (window.focus) {newwindow.focus()}';
-echo 'return false;';
+echo 'window.open(url, "_self");';
 echo '}';
 echo '</script>';
 ?>
