@@ -114,6 +114,8 @@ echo 'window.location = "../";';
 echo '}';
 echo '</script>';
 echo '</div>';
+if(!$isLoggedIn)
+{
 echo '<div class="toolbarUserSessionHolder">';
 echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();">';
 echo 'Sign Up';
@@ -132,9 +134,13 @@ echo 'window.location = "../login";';
 echo '}';
 echo '</script>';
 echo '</div>';
+}
+else
+{
 echo '<div class="userLoggedInHolder">';
 echo '<img class="userLoggedInPicture" src="https://firebasestorage.googleapis.com/v0/b/zeo-flow.appspot.com/o/ProfilePicturesLowQ%2F6jk6xzpHdrwB4kqok4xFDy2HrfobqKJeWRgOE470158261189.jpeg?alt=media" />';
 echo '</div>';
+}
 echo '</div>';
 echo '<div class="userLoggedInDetails hideElement" id="userLoggedInDetails">';
 echo '<div class="userLoggedInDetailsHolder unselectable">';
