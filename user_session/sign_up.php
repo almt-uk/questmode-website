@@ -24,7 +24,7 @@ echo '<!-- Disable tap highlight on IE -->';
 echo '<meta name="msapplication-tap-highlight" content="no">';
 echo '';
 echo '<!-- Web Application Manifest -->';
-echo '<link rel="manifest" href="manifest.json">';
+echo '<link rel="manifest" href="../manifest.json">';
 echo '';
 echo '<!-- Add to homescreen for Chrome on Android -->';
 echo '<meta name="mobile-web-app-capable" content="yes">';
