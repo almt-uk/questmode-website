@@ -14,7 +14,7 @@ if(isset($_POST['logout']))
 <?php
   $path = $_SERVER['DOCUMENT_ROOT'];
   require_once $path . '/db_handler/web.php';
-  if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
+  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
   {
     $isLoggedIn = false;
   }
@@ -246,9 +246,9 @@ echo '<div class="rightHolder unselectable">';
 echo '<div class="rightSubolder">';
 if($isLoggedIn)
 {
-if(isset($_COOKIE["userData"]))
+if(isset($_SESSION["userData"]))
 {
-$userData = json_decode($_COOKIE["userData"]);
+$userData = json_decode($_SESSION["userData"]);
 if(!$userData->is_teacher)
 {
 echo '<div class="quizzJoinHolder">';
