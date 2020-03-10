@@ -2,7 +2,7 @@
   session_start();
   if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
-    echo 'javascript:window.location = "../";';
+    header("Location: ../",  true);
     exit;
   }
   $path = $_SERVER['DOCUMENT_ROOT'];
@@ -20,8 +20,7 @@
         {
             $_SESSION["isLoggedIn"] = true;
             $_SESSION["userData"] = $loginUser["userData"];
-            echo 'javascript:window.location = "../";';
-            
+            exit;   
         }
         exit;
     } else {
@@ -45,7 +44,6 @@
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>Log In | Quest Mode</title>';
 echo '';
