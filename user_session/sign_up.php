@@ -3,7 +3,7 @@
   session_start();
   if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
-      header("Location: ../index.php");
+      header("Location: ../");
       exit;
   }
   if(isset($_POST['register']) && $_POST['register']) {
