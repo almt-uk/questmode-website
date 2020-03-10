@@ -1,7 +1,7 @@
 <?php
   $path = $_SERVER['DOCUMENT_ROOT'];
   session_start();
-  if(isset($_COOKIE["userData"]) && isset($_COOKIE["isLoggedIn"]))
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
       header("Location: ../index.php");
       exit;
@@ -27,7 +27,7 @@
 ?>
 
 <?php
-  if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
+  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
   {
     $isLoggedIn = false;
   }
