@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 if(isset($_POST['logout']))
 {
   unset($_SESSION["isLoggedIn"]);
@@ -14,13 +15,13 @@ if(isset($_POST['logout']))
 <?php
   $path = $_SERVER['DOCUMENT_ROOT'];
   require_once $path . '/db_handler/web.php';
-  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
+  if(!isset($_SESSION['isLoggedIn']))
   {
     $isLoggedIn = false;
   }
   else
   {
-    $isLoggedIn = true;
+    $isLoggedIn = $_SESSION['isLoggedIn'];
   }
 ?>
 
@@ -28,7 +29,6 @@ if(isset($_POST['logout']))
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>Quest Mode</title>';
 echo '<!-- Disable tap highlight on IE -->';
