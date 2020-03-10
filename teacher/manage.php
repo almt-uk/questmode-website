@@ -20,6 +20,9 @@ echo '<link rel="stylesheet" href="../assets/style/material.css" type="text/css"
 echo '<link rel="stylesheet" href="../assets/style/toolbar.css" type="text/css">';
 echo '<script src="../assets/script/cookieConsent.js" type="text/javascript"></script>';
 echo '<style>';
+echo 'img[alt="www.000webhost.com"] {';
+echo 'display: none !important;';
+echo '}';
 echo '/* Body Style */';
 echo 'body {';
 echo 'margin: 0;';
