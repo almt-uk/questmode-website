@@ -308,7 +308,7 @@ echo '<input class="inputHolder" id="universityData" placeholder=" " type="text"
 echo '<span>University</span>';
 echo '</label>';
 echo '</div>';
-echo '<div class="toolbarUserSessionSignUp" onClick="tryRegister();" name="login">';
+echo '<div class="toolbarUserSessionSignUp" onClick="tryRegister();" name="register">';
 echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
