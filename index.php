@@ -177,7 +177,7 @@ echo '</div>';
 if(!$isLoggedIn)
 {
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();"';
+echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();">';
 echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
@@ -348,16 +348,4 @@ echo '}';
 echo '}';
 echo '});';
 echo '</script>';
-?>
-
-<?php
-if(!$isLoggedIn)
-{
-echo '<script>';
-echo 'var toolbarUserSessionSignUp = document.getElementById("toolbarUserSessionSignUp");';
-echo 'toolbarUserSessionSignUp.addEventListener("click", function() {';
-echo 'document.location.href = ' . "user_session/sign_up.html";
-echo '});';
-echo '</script>';
-}
 ?>
