@@ -219,6 +219,10 @@ echo '<div class="rightHolder unselectable">';
 echo '<div class="rightSubolder">';
 if($isLoggedIn)
 {
+if(isset($_COOKIE["userData"]))
+{
+$userData = json_decode($_COOKIE["userData"]);
+if($userData->is_teacher)
 echo '<div class="quizzJoinHolder">';
 echo '<div class="quizzJoinTitle">';
 echo 'Join Quizz';
@@ -275,6 +279,7 @@ echo '<div class="quizzJoinBtn" onclick="window.open("quizz/create.html", "_self
 echo 'Create';
 echo '</div>';
 echo '</div>';
+}
 }
 echo '</div>';
 echo '</div>';
