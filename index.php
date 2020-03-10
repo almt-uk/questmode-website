@@ -323,9 +323,14 @@ echo '</div>';
 echo '<div class="quizzJoinSubtitle">';
 echo 'Create a quizz for your students.';
 echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="window.open("quizz/create.html", "_self");">';
+echo '<div class="quizzJoinBtn" onclick="goCreateQuizz();">';
 echo 'Create';
 echo '</div>';
+echo '<script type="text/javascript">';
+echo 'function goCreateQuizz() {';
+echo 'window.location = "create";';
+echo '}';
+echo '</script>';
 echo '</div>';
 }
 }
