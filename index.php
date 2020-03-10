@@ -12,14 +12,6 @@
 ?>
 
 <?php
-echo '<script language="javascript" type="text/javascript">';
-echo 'function popitup(url) {';
-echo 'window.open(url, "_self");';
-echo '}';
-echo '</script>';
-?>
-
-<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
