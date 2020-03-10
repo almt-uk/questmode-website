@@ -271,7 +271,7 @@ echo '</div>';
 echo '<div class="quizzJoinSubtitle">';
 echo 'In case that you have a quizz code from your teacher, join it faster - no registration needed!';
 echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="window.open("join_quizz.html", "_self");">';
+echo '<div class="quizzJoinBtn" onclick="goJoinQuizz();">';
 echo 'Join';
 echo '</div>';
 echo '</div>';
