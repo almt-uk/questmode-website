@@ -164,7 +164,7 @@ echo '</div>';
 if(!$isLoggedIn)
 {
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick="return popitup(\"user_session/sign_up.html\")">';
+echo '<div class="toolbarUserSessionSignUp" id="toolbarUserSessionSignUp">';
 echo 'Sign Up';
 echo '</div>';
 echo '<div class="toolbarUserSessionLogIn" onclick="window.open("user_session/log_in.html", "_self");">';
@@ -304,6 +304,15 @@ echo '} else {';
 echo 'userLoggedInDetails.classList.add("hideElement");';
 echo '}';
 echo '}';
+echo '});';
+echo '</script>';
+?>
+
+<?php
+echo '<script>';
+echo 'var btn = document.getElementById("myBtn");';
+echo 'btn.addEventListener("click", function() {';
+echo 'document.location.href = ' . "user_session/sign_up.html";
 echo '});';
 echo '</script>';
 ?>
