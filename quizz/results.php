@@ -1,4 +1,4 @@
-<? php
+<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
@@ -89,7 +89,7 @@ echo 'width: 100%;';
 echo 'left: 50%;';
 echo 'top: -20px;';
 echo 'transform: perspective(1px) translateX(-50%);';
-echo 'font-family: 'PT Sans';';
+echo 'font-family: "PT Sans";';
 echo 'color: rgb(2, 53, 36);';
 echo 'font-weight: 900;';
 echo 'font-size: 40px;';
@@ -118,7 +118,7 @@ echo 'width: 100%;';
 echo 'left: 50%;';
 echo 'top: 2px;';
 echo 'transform: perspective(1px) translateX(-50%);';
-echo 'font-family: 'PT Sans';';
+echo 'font-family: "PT Sans";';
 echo 'color: rgb(2, 53, 36);';
 echo 'font-weight: 900;';
 echo 'font-size: 40px;';
@@ -147,7 +147,7 @@ echo 'text-align: center;';
 echo 'position: relative;';
 echo 'top: 50%;';
 echo 'transform: perspective(1px) translateY(-50%);';
-echo 'font-family: 'PT Sans';';
+echo 'font-family: "PT Sans";';
 echo 'text-shadow: 0px 1px, 1px 0px, 1px 1px;';
 echo 'font-weight: 900;';
 echo 'font-size: 34px;';
