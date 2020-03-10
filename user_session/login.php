@@ -1,26 +1,32 @@
 <?php
-  $path = $_SERVER['DOCUMENT_ROOT'];
   session_start();
   if(isset($_COOKIE["userData"]) && isset($_COOKIE["loggedin"]))
   {
       header("Location: ../index.php");
       exit;
   }
+  $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['register']) && $_POST['register']) {
     
-    if(isset($_POST['emailData']) && isset($_POST['passwordData']) && isset($_POST['usernameData'])
-        && isset($_POST['universityData'])) {
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
         $emailData=$_POST['emailData'];
         $passwordData=$_POST['passwordData'];
-        $usernameData=$_POST['usernameData'];
-        $universityData=$_POST['universityData'];
         require_once $path . '/db_handler/web.php';
         require_once $path . '/libs/Utils/ip_details.php';
         $db = new DbHandlerWeb();
         $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
-        $registerUser=$db->registerUser($emailData, $passwordData, $usernameData, $universityData,
-            getIPDetails()->geoplugin_countryCode);
-        echo $registerUser["error"];
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            setcookie("loggedin", true, time()+3600, "/","", 0); 
+            setcookie("userData", $loginUser["userData"], time()+3600, "/","", 0);
+            header("Location: ../index.php");
+            exit;
+        }
+        else
+        {
+
+        }
     }
     exit;
   }
@@ -34,7 +40,6 @@
   else
   {
     $isLoggedIn = true;
-    
   }
 ?>
 
@@ -44,13 +49,13 @@ echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
 echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-echo '<title>Register | Quest Mode</title>';
+echo '<title>Log In | Quest Mode</title>';
 echo '';
 echo '<!-- Disable tap highlight on IE -->';
 echo '<meta name="msapplication-tap-highlight" content="no">';
 echo '';
 echo '<!-- Web Application Manifest -->';
-echo '<link rel="manifest" href="../manifest.json">';
+echo '<link rel="manifest" href="manifest.json">';
 echo '';
 echo '<!-- Add to homescreen for Chrome on Android -->';
 echo '<meta name="mobile-web-app-capable" content="yes">';
@@ -86,6 +91,12 @@ echo 'user-select: none; /* Standard */';
 echo '}';
 echo 'a {';
 echo 'text-decoration:none';
+echo '}';
+echo 'a:hover {';
+echo 'color: rgb(55, 0, 131);';
+echo '}';
+echo 'a:active {';
+echo 'color: rgb(30, 0, 73);';
 echo '}';
 echo '';
 echo '/* Prevent Resizing on Padding */';
@@ -143,6 +154,38 @@ echo 'padding: 10px;';
 echo 'padding-right: 20px;';
 echo '}';
 echo '.toolbarUserSessionLogIn {';
+echo 'position: relative;';
+echo 'left: 50%;';
+echo 'transform: translateX(-50%);';
+echo 'width: fit-content;';
+echo 'margin-top: 20px;';
+echo 'padding-top: 6px;';
+echo 'margin-bottom: 10px;';
+echo 'padding-bottom: 6px;';
+echo 'font-weight: 900;';
+echo 'font-size: 16px;';
+echo 'padding-left: 18px;';
+echo 'padding-right: 18px;';
+echo 'font-family: "PT Sans";';
+echo 'color: rgb(0, 0, 0);';
+echo 'background-color: #eeeeee;';
+echo 'border-radius: 5px;';
+echo '-webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.5));';
+echo 'filter: drop-shadow(0px 0px 1px rgb(0, 0, 0));';
+echo '}';
+echo '.toolbarUserSessionLogIn:hover {';
+echo 'position: relative;';
+echo 'left: 50%;';
+echo 'transform: translateX(-50%) scale(0.9);';
+echo 'background-color: #ececec;';
+echo '-moz-box-shadow: inset 0 0 10px #000000;';
+echo '-webkit-box-shadow: inset 0 0 10px #000000;';
+echo 'box-shadow: inset 0 0 10px #000000;';
+echo '-webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));';
+echo 'filter: drop-shadow(0px 0px 3px rgb(0, 0, 0));';
+echo 'cursor: pointer;';
+echo '}';
+echo '.toolbarUserSessionSignUp {';
 echo 'float: left;';
 echo 'margin-left: 10px;';
 echo 'margin-top: 4px;';
@@ -154,18 +197,23 @@ echo 'font-size: 16px;';
 echo 'padding-left: 18px;';
 echo 'padding-right: 18px;';
 echo 'font-family: "PT Sans";';
-echo 'color: rgb(0, 0, 0);';
-echo 'background-color: #ffffff;';
+echo 'color: rgb(255, 255, 255);';
+echo 'background-color: #c50000;';
+echo '-webkit-filter: drop-shadow(0px 0px 4px #8d0000c0);';
+echo 'filter: drop-shadow(0px 0px 4px #8d0000be);';
+echo '-moz-box-shadow: inset 0 0 10px #00000083;';
+echo '-webkit-box-shadow: inset 0 0 10px #00000083;';
+echo 'box-shadow: inset 0 0 10px #00000083;';
 echo 'border-radius: 5px;';
 echo '}';
-echo '.toolbarUserSessionLogIn:hover {';
+echo '.toolbarUserSessionSignUp:hover {';
 echo 'transform: scale(0.9);';
-echo 'background-color: #ececec;';
+echo 'background-color: #ff1d1d;';
 echo '-moz-box-shadow: inset 0 0 10px #000000;';
 echo '-webkit-box-shadow: inset 0 0 10px #000000;';
 echo 'box-shadow: inset 0 0 10px #000000;';
-echo '-webkit-filter: drop-shadow(0px 0px 3px rgba(81, 255, 0, 0.5));';
-echo 'filter: drop-shadow(0px 0px 3px rgb(118, 255, 63));';
+echo '-webkit-filter: drop-shadow(0px 0px 3px rgba(255, 40, 40, 0.5));';
+echo 'filter: drop-shadow(0px 0px 3px rgb(255, 88, 88));';
 echo 'cursor: pointer;';
 echo '}';
 echo '';
@@ -179,7 +227,7 @@ echo '}';
 echo '';
 echo '/* Sign Up Holder Style */';
 echo '.signUpHolder {';
-echo 'width: 400px;';
+echo 'width: 350px;';
 echo 'background-color: rgb(236, 236, 236);';
 echo 'font-family: "PT Sans";';
 echo 'color: rgb(0, 0, 0);';
@@ -219,45 +267,17 @@ echo 'position: relative;';
 echo 'left: 50%;';
 echo 'transform: translateX(-50%);';
 echo '}';
-echo '.toolbarUserSessionSignUp {';
-echo 'position: relative;';
-echo 'left: 50%;';
-echo 'transform: translateX(-50%);';
-echo 'width: fit-content;';
-echo 'margin-top: 20px;';
-echo 'padding-top: 6px;';
-echo 'margin-bottom: 10px;';
-echo 'padding-bottom: 6px;';
-echo 'font-weight: 900;';
-echo 'font-size: 16px;';
-echo 'padding-left: 18px;';
-echo 'padding-right: 18px;';
-echo 'font-family: "PT Sans";';
-echo 'color: rgb(255, 255, 255);';
-echo 'background-color: #c50000;';
-echo '-webkit-filter: drop-shadow(0px 0px 4px #8d0000c0);';
-echo 'filter: drop-shadow(0px 0px 4px #8d0000be);';
-echo '-moz-box-shadow: inset 0 0 10px #00000083;';
-echo '-webkit-box-shadow: inset 0 0 10px #00000083;';
-echo 'box-shadow: inset 0 0 10px #00000083;';
-echo 'border-radius: 5px;';
-echo '}';
-echo '.toolbarUserSessionSignUp:hover {';
-echo 'position: relative;';
-echo 'left: 50%;';
-echo 'transform: translateX(-50%) scale(0.9);';
-echo 'background-color: #ff1d1d;';
-echo '-moz-box-shadow: inset 0 0 10px #000000;';
-echo '-webkit-box-shadow: inset 0 0 10px #000000;';
-echo 'box-shadow: inset 0 0 10px #000000;';
-echo '-webkit-filter: drop-shadow(0px 0px 3px rgba(255, 40, 40, 0.5));';
-echo 'filter: drop-shadow(0px 0px 3px rgb(255, 88, 88));';
-echo 'cursor: pointer;';
+echo '.forgotPassword {';
+echo 'font-size: 14px;';
+echo 'text-align: center;';
 echo '}';
 echo '';
 echo '</style>';
 echo '';
 echo '</head>';
+?>
+
+<?php
 echo '<body>';
 echo '';
 echo '<div class="toolbarHolder toolbarShadow unselectable" id="toolbar">';
@@ -272,12 +292,12 @@ echo '}';
 echo '</script>';
 echo '</div>';
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionLogIn" onclick="goLogin();">';
-echo 'Log In';
+echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();">';
+echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
-echo 'function goLogin() {';
-echo 'window.location = "login";';
+echo 'function goRegister() {';
+echo 'window.location = "sign_up";';
 echo '}';
 echo '</script>';
 echo '</div>';
@@ -286,9 +306,9 @@ echo '';
 echo '<div class="contentHolder">';
 echo '<div class="signUpHolder">';
 echo '<div class="signUpTitle">';
-echo 'Sign Up';
+echo 'Log In';
 echo '</div>';
-echo '<form action="/register" method="post">';
+echo '<form action="/login" method="post">';
 echo '<div class="inputHolder">';
 echo '<label class="pure-material-textfield-outlined codeHolder">';
 echo '<input class="inputHolder" id="emailData" placeholder=" " type="email" required>';
@@ -301,38 +321,25 @@ echo '<input class="inputHolder" id="passwordData" placeholder=" " type="passwor
 echo '<span>Password</span>';
 echo '</label>';
 echo '</div>';
-echo '<div class="inputHolder">';
-echo '<label class="pure-material-textfield-outlined codeHolder">';
-echo '<input class="inputHolder" id="usernameData" placeholder=" " type="text" required>';
-echo '<span>Username</span>';
-echo '</label>';
+echo '<div class="toolbarUserSessionLogIn" onClick="tryLogin();" name="login">';
+echo 'Log In';
 echo '</div>';
-echo '<div class="inputHolder">';
-echo '<label class="pure-material-textfield-outlined codeHolder">';
-echo '<input class="inputHolder" id="universityData" placeholder=" " type="text" required>';
-echo '<span>University</span>';
-echo '</label>';
+echo '<div class="forgotPassword">';
+echo 'Forgotten your details? <b><a href="help_sign_in.html">Get help signing in.</a></b>';
 echo '</div>';
-echo '<div class="toolbarUserSessionSignUp" onClick="tryRegister();" name="register">';
-echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
-echo 'function tryRegister() {';
+echo 'function tryLogin() {';
 echo 'var emailData = document.getElementById("emailData").value;';
 echo 'var passwordData = document.getElementById("passwordData").value;';
-echo 'var usernameData = document.getElementById("usernameData").value;';
-echo 'var universityData = document.getElementById("universityData").value;';
-echo 'if(emailData.length != 0 && passwordData.length != 0 && usernameData.length != 0';
-echo '&& universityData.length != 0)';
+echo 'if(emailData.length != 0 && passwordData.length != 0)';
 echo '{';
 echo '$.ajax({';
 echo 'type: "post",';
 echo 'data: {';
 echo 'register: true,';
 echo 'emailData: emailData,';
-echo 'passwordData: passwordData,';
-echo 'usernameData: usernameData,';
-echo 'universityData: universityData';
+echo 'passwordData: passwordData';
 echo '},';
 echo 'success: function(response){';
 echo 'console.log(response);';
@@ -342,7 +349,6 @@ echo '}';
 echo '};';
 echo '</script>';
 echo '</form>';
-echo '</div>';
 echo '</div>';
 echo '';
 echo '<div id="myCookieConsent">';
