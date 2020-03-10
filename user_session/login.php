@@ -1,6 +1,12 @@
 <?php
-  $path = $_SERVER['DOCUMENT_ROOT'];
   session_start();
+  if(isset($_COOKIE["userData"]))
+  {
+      echo $_COOKIE["userData"];
+      return header("Location: ../index.php");
+      exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['register']) && $_POST['register']) {
     
     if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
@@ -13,9 +19,10 @@
         $loginUser=$db->loginUser($emailData, $passwordData);
         if(!$loginUser["error"])
         {
-            $_COOKIE["loggedin"] = true;
-            $_COOKIE["userData"] = $loginUser["userData"];
+            setcookie("loggedin", true, time()+3600, "/","", 0); 
+            setcookie("userData", $loginUser["userData"], time()+3600, "/","", 0);
             header("Location: ../index.php");
+            exit;
         }
         else
         {
