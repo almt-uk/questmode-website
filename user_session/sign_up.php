@@ -10,10 +10,12 @@
         $usernameData=$_POST['usernameData'];
         $universityData=$_POST['universityData'];
         require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
         $db = new DbHandlerWeb();
         $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
-        $registerUser=$db->registerUser($emailData, $passwordData, $usernameData, $universityData);
-        echo implode("," $registerUser);
+        $registerUser=$db->registerUser($emailData, $passwordData, $usernameData, $universityData,
+            getIPDetails()->geoplugin_countryCode);
+        echo $registerUser["institution_id"];
     }
     exit;
   }
