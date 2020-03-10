@@ -1,13 +1,12 @@
 <?php
 
-if(isset($_POST['logout'])) {
+if(isset($_POST['logout']))
+{
   unset($_SESSION["isLoggedIn"]);
   unset($_SESSION["userData"]);
   session_destroy();
   header("Refresh:0");
   exit;
-}
-
 }
 
 ?>
