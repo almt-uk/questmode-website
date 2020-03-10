@@ -59,7 +59,7 @@ echo 'text-align: center;';
 echo 'font-weight: 900;';
 echo 'font-size: 40px;';
 echo 'text-shadow: 0px 2px, 2px 0px, 2px 2px;';
-echo 'font-family: 'PT Sans';';
+echo 'font-family: "PT Sans";';
 echo 'color: rgb(0, 0, 0);';
 echo 'padding: 50px;';
 echo 'position: fixed;';
