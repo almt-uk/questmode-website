@@ -188,7 +188,7 @@ echo '}';
 echo '</script>';
 echo '</div>';
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick="window.open('../user_session/sign_up.html', '_self');">';
+echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();">';
 echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
