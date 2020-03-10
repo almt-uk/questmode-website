@@ -222,7 +222,8 @@ if($isLoggedIn)
 if(isset($_COOKIE["userData"]))
 {
 $userData = json_decode($_COOKIE["userData"]);
-if($userData->is_teacher)
+if(!$userData->is_teacher)
+{
 echo '<div class="quizzJoinHolder">';
 echo '<div class="quizzJoinTitle">';
 echo 'Join Quizz';
@@ -255,7 +256,9 @@ echo '<div class="quizzJoinSubtitle">';
 echo '47. Name 143474575 (LVL 14)';
 echo '</div>';
 echo '</div>';
-echo '';
+}
+else
+{
 echo '<div class="quizzJoinHolder">';
 echo '<div class="quizzJoinTitle">';
 echo 'Manage Classes';
@@ -279,6 +282,7 @@ echo '<div class="quizzJoinBtn" onclick="window.open("quizz/create.html", "_self
 echo 'Create';
 echo '</div>';
 echo '</div>';
+}
 }
 }
 echo '</div>';
