@@ -20,15 +20,13 @@
         {
             $_SESSION["isLoggedIn"] = true;
             $_SESSION["userData"] = $loginUser["userData"];
-            header("Refresh:0");
-            exit;
+            header("Location: ../");
+            
         }
-        else
-        {
-
-        }
+        exit;
+    } else {
+        exit;
     }
-    exit;
   }
 ?>
 
