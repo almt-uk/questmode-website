@@ -13,8 +13,9 @@
         $loginUser=$db->loginUser($emailData, $passwordData);
         if(!$loginUser["error"])
         {
-            echo json_decode($loginUser["userData"])->user_id;
-
+            $_SESSION["loggedin"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            header("Location: /");
         }
         else
         {
