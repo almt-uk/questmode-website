@@ -3,13 +3,15 @@
   session_start();
   if(isset($_POST['register']) && $_POST['register']) {
     
-    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
-
+    if(isset($_POST['emailData']) && isset($_POST['passwordData']) && isset($_POST['usernameData'])
+        && isset($_POST['universityData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        $usernameData=$_POST['usernameData'];
+        $universityData=$_POST['universityData'];
+        echo $emailData;
     }
-    $userUsername = json_decode($_SESSION["userData"])->username;
-    echo $userUsername;
     exit;
-
   }
   if(isset($_POST['ajax'])) {
     if(isset($_POST['user_id']) && isset($_POST['type'])) {
