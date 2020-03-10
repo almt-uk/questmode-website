@@ -13,6 +13,16 @@
 ?>
 
 <?php
+echo '<script language="javascript" type="text/javascript">';
+echo 'function popitup(url) {';
+echo 'newwindow=window.open(url,'name','height=400,width=600');';
+echo 'if (window.focus) {newwindow.focus()}';
+echo 'return false;';
+echo '}';
+echo '</script>';
+?>
+
+<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
