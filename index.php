@@ -172,9 +172,7 @@ echo '-webkit-box-shadow: inset 0 0 10px #00000083;';
 echo 'box-shadow: inset 0 0 10px #00000083;';
 echo 'cursor: pointer;';
 echo '}';
-echo '';
 echo '</style>';
-echo '';
 echo '</head>';
 ?>
 
