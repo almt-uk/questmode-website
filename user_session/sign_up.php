@@ -283,7 +283,7 @@ echo '<div class="signUpHolder">';
 echo '<div class="signUpTitle">';
 echo 'Sign Up';
 echo '</div>';
-echo '<form class="register" action="/register" method="post">';
+echo '<form action="/register" method="post">';
 echo '<div class="inputHolder">';
 echo '<label class="pure-material-textfield-outlined codeHolder">';
 echo '<input class="inputHolder" id="emailData" placeholder=" " type="email" required>';
