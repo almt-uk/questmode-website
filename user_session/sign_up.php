@@ -1,6 +1,6 @@
 <?php
-  $path = $_SERVER['DOCUMENT_ROOT'];
   session_start();
+  $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
       header("Location: ../");
