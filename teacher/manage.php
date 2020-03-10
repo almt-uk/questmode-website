@@ -201,7 +201,7 @@ echo 'Log In';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goLogin() {';
-echo 'window.location = "login";';
+echo 'window.location = "../login";';
 echo '}';
 echo '</script>';
 echo '</div>';
