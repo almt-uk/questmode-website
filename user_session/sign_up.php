@@ -1,6 +1,11 @@
 <?php
   $path = $_SERVER['DOCUMENT_ROOT'];
   session_start();
+  if(isset($_COOKIE["userData"]) && isset($_COOKIE["loggedin"]))
+  {
+      header("Location: ../index.php");
+      exit;
+  }
   if(isset($_POST['register']) && $_POST['register']) {
     
     if(isset($_POST['emailData']) && isset($_POST['passwordData']) && isset($_POST['usernameData'])
