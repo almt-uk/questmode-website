@@ -634,7 +634,7 @@ echo 'alert(document.getElementById("quizzCode").value);';
 echo 'document.getElementById("quizzCode").value = "";';
 echo '}';
 echo '}';
-echo '$('#quizzCode').keyup(function (e) {';
+echo '$("#quizzCode").keyup(function (e) {';
 echo 'if (e.keyCode === 13) {';
 echo 'addStudentJS();';
 echo '}';
