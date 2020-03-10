@@ -2,7 +2,6 @@
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>Waiting To Play</title>';
 echo '<!-- Disable tap highlight on IE -->';
