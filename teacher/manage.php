@@ -2,8 +2,17 @@
   session_start();
   if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
   {
-    header("Location: /",  true);
+    header("Location: ../",  true);
     exit;
+  }
+  else if(isset($_SESSION["userData"]))
+  {
+    $userData = json_decode($_SESSION["userData"]);
+    if(!$userData->is_teacher)
+    {
+        header("Location: ../",  true);
+        exit;
+    }
   }
 ?>
 
