@@ -1,4 +1,39 @@
 <?php
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  session_start();
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData']) && isset($_POST['usernameData'])
+        && isset($_POST['universityData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        $usernameData=$_POST['usernameData'];
+        $universityData=$_POST['universityData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $registerUser=$db->registerUser($emailData, $passwordData, $usernameData, $universityData,
+            getIPDetails()->geoplugin_countryCode);
+        echo $registerUser["error"];
+    }
+    exit;
+  }
+?>
+
+<?php
+  if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
+  {
+    $isLoggedIn = false;
+  }
+  else
+  {
+    $isLoggedIn = true;
+    
+  }
+?>
+
+<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
