@@ -158,6 +158,9 @@ echo 'color: rgb(255, 255, 255);';
 echo '}';
 echo '</style>';
 echo '</head>';
+?>
+
+<?php
 echo '<body>';
 echo '<div class="contentHolder unselectable">';
 echo '<div class="resultHolder" id="resultHolder">';
