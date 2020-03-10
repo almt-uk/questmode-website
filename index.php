@@ -165,7 +165,7 @@ echo '</div>';
 if(!$isLoggedIn)
 {
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick=\"window.open("user_session/sign_up.html", "_self");\">';
+echo '<div class="toolbarUserSessionSignUp" onclick="window.open("user_session/sign_up.html", "_self");">';
 echo 'Sign Up';
 echo '</div>';
 echo '<div class="toolbarUserSessionLogIn" onclick="window.open("user_session/log_in.html", "_self");">';
