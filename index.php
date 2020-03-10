@@ -11,32 +11,7 @@
     $isLoggedIn = true;
   }
 ?>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Quest Mode">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quest Mode</title>
-    <meta property="og:title" content="Quest Mode">
-    <meta property="og:description" content="Quest Mode">
-    <meta property="og:url" content="questmode.000webhostapp.com/">
-    <meta property="og:site_name" content="Quest Mode">
-    <meta name="keywords" content="quest mode, almt, hackathon">
-  
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
-  
-    <!-- Web Application Manifest -->
-    <link rel="manifest" href=" <?php echo $path . "/"; ?>manifest.json">
-  
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="ZeoFlow">
-    <meta name="theme-color" content="#ffffff">
 
-</head>
-<body>
-</body>
 <?php
 echo '<head>';
 echo '<meta charset="utf-8">';
@@ -54,10 +29,10 @@ echo '<meta name="application-name" content="ZeoFlow">';
 echo '<meta name="theme-color" content="#ffffff">';
 echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
-echo '<link rel="stylesheet" href="assets/style/cookieConsent.css" type="text/css">';
-echo '<link rel="stylesheet" href="assets/style/material.css" type="text/css">';
-echo '<link rel="stylesheet" href="assets/style/toolbar.css" type="text/css">';
-echo '<script src="assets/script/cookieConsent.js" type="text/javascript"></script>';
+echo '<link rel="stylesheet" href="' . $path . "/" . 'assets/style/cookieConsent.css" type="text/css">';
+echo '<link rel="stylesheet" href="' . $path . "/" . 'assets/style/material.css" type="text/css">';
+echo '<link rel="stylesheet" href="' . $path . "/" . 'assets/style/toolbar.css" type="text/css">';
+echo '<script src="' . $path . "/" . 'assets/script/cookieConsent.js" type="text/javascript"></script>';
 echo '<style>';
 echo '/* Body Style */';
 echo 'body {';
@@ -131,13 +106,13 @@ echo '.quizzJoinTitle {';
 echo 'text-align: center;';
 echo 'font-weight: 900;';
 echo 'font-size: 18px;';
-echo 'font-family: 'PT Sans';';
+echo 'font-family: "PT Sans";';
 echo 'color: rgb(0, 0, 0);';
 echo '}';
 echo '.quizzJoinSubtitle {';
 echo 'padding-top: 10px;';
 echo 'font-size: 16px;';
-echo 'font-family: 'PT Sans';';
+echo 'font-family: "PT Sans";';
 echo 'color: rgb(0, 0, 0);';
 echo '}';
 echo '.quizzJoinBtn {';
@@ -150,7 +125,7 @@ echo 'font-weight: 900;';
 echo 'font-size: 16px;';
 echo 'padding-left: 30px;';
 echo 'padding-right: 30px;';
-echo 'font-family: 'PT Sans';';
+echo 'font-family: "PT Sans";';
 echo 'color: rgb(255, 255, 255);';
 echo 'border-radius: 5px;';
 echo 'background-color: #1a008d;';
@@ -186,10 +161,10 @@ echo 'Quest Mode';
 echo '</div>';
 echo '</div>';
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick="window.open('user_session/sign_up.html', '_self');">';
+echo '<div class="toolbarUserSessionSignUp" onclick="window.open("user_session/sign_up.html", "_self");">';
 echo 'Sign Up';
 echo '</div>';
-echo '<div class="toolbarUserSessionLogIn" onclick="window.open('user_session/log_in.html', '_self');">';
+echo '<div class="toolbarUserSessionLogIn" onclick="window.open("user_session/log_in.html", "_self");">';
 echo 'Log In';
 echo '</div>';
 echo '</div>';
@@ -212,7 +187,7 @@ echo '</div>';
 echo '</div>';
 echo '<div class="profileHolder">';
 echo '<div class="userLoggedInOptions">';
-echo '<div class="userLoggedInOptionsItem" onclick="window.open('join_quizz.html', '_self');">';
+echo '<div class="userLoggedInOptionsItem" onclick="window.open("join_quizz.html", "_self");">';
 echo 'Join Quizz';
 echo '</div>';
 echo '<div class="userLoggedInOptionsItem">';
@@ -244,7 +219,7 @@ echo '</div>';
 echo '<div class="quizzJoinSubtitle">';
 echo 'In case that you have a quizz code from your teacher, join it faster - no registration needed!';
 echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="window.open('join_quizz.html', '_self');">';
+echo '<div class="quizzJoinBtn" onclick="window.open("join_quizz.html", "_self");">';
 echo 'Join';
 echo '</div>';
 echo '</div>';
@@ -277,7 +252,7 @@ echo '</div>';
 echo '<div class="quizzJoinSubtitle">';
 echo 'Add students to your classes, create quizzes for classes and view statistics for them.';
 echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="window.open('teacher/manage.html', '_self');">';
+echo '<div class="quizzJoinBtn" onclick="window.open("teacher/manage.html", "_self");">';
 echo 'Manage';
 echo '</div>';
 echo '</div>';
@@ -289,7 +264,7 @@ echo '</div>';
 echo '<div class="quizzJoinSubtitle">';
 echo 'Create a quizz for your students.';
 echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="window.open('quizz/create.html', '_self');">';
+echo '<div class="quizzJoinBtn" onclick="window.open("quizz/create.html", "_self");">';
 echo 'Create';
 echo '</div>';
 echo '</div>';
