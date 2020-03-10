@@ -236,7 +236,7 @@ echo '<body>';
 echo '';
 echo '<div class="toolbarHolder toolbarShadow unselectable" id="toolbar">';
 echo '<div class="toolbarContent">';
-echo '<div class="titleToolbar" onclick="' . header("Location: ../index") . '">';
+echo '<div class="titleToolbar" onclick="window.open("../index.html", "_self");">';
 echo 'Quest Mode';
 echo '</div>';
 echo '</div>';
