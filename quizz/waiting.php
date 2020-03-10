@@ -27,7 +27,8 @@
             $userData = json_decode($_SESSION["userData"]);
             if(!$userData->is_teacher)
             {
-                
+                header("Location: ../",  true);
+                exit;
             }
         }
     }
