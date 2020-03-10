@@ -177,12 +177,22 @@ echo '</div>';
 if(!$isLoggedIn)
 {
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" id="toolbarUserSessionSignUp">';
+echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();"';
 echo 'Sign Up';
 echo '</div>';
-echo '<div class="toolbarUserSessionLogIn" onclick="window.open("user_session/log_in.html", "_self");">';
+echo '<script type="text/javascript">';
+echo 'function goRegister() {';
+echo 'window.location = "sign_up";';
+echo '}';
+echo '</script>';
+echo '<div class="toolbarUserSessionLogIn" onclick="goLogin();">';
 echo 'Log In';
 echo '</div>';
+echo '<script type="text/javascript">';
+echo 'function goLogin() {';
+echo 'window.location = "login";';
+echo '}';
+echo '</script>';
 echo '</div>';
 }
 else
