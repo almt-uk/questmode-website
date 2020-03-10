@@ -298,6 +298,7 @@ echo '<div class="signUpHolder">';
 echo '<div class="signUpTitle">';
 echo 'Log In';
 echo '</div>';
+echo '<form action="/login" method="post">';
 echo '<div class="inputHolder">';
 echo '<label class="pure-material-textfield-outlined codeHolder">';
 echo '<input class="inputHolder" id="quizzCode" placeholder=" " type="email" required>';
