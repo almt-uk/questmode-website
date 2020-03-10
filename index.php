@@ -4,10 +4,11 @@
   if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
   {
     echo "not logged in";
+    $isLoggedIn = false;
   }
   else
   {
-    echo "logged in";
+    $isLoggedIn = true;
   }
 ?>
 <head>
