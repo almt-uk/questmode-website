@@ -20,6 +20,17 @@
   else
   {
     $isLoggedIn = $_SESSION['isLoggedIn'];
+    if($isLoggedIn)
+    {
+        if(isset($_SESSION["userData"]))
+        {
+            $userData = json_decode($_SESSION["userData"]);
+            if(!$userData->is_teacher)
+            {
+                
+            }
+        }
+    }
   }
 ?>
 
