@@ -340,6 +340,9 @@ echo 'cursor: pointer;';
 echo '}';
 echo '</style>';
 echo '</head>';
+?>
+
+<?php
 echo '<body>';
 echo '<div class="toolbarHolder toolbarShadow unselectable" id="toolbar">';
 echo '<div class="toolbarContent">';
