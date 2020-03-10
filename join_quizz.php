@@ -1,9 +1,16 @@
 <?php
   session_start();
-  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
+  if(isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'])
   {
-    header("Location: /",  true);
-    exit;
+    if(isset($_SESSION["userData"]))
+    {
+        $userData = json_decode($_SESSION["userData"]);
+        if(!$userData->is_teacher)
+        {
+            header("Location: /",  true);
+            exit;
+        }
+    }
   }
 ?>
 
