@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(isset($_COOKIE["userData"]) && isset($_COOKIE["isLoggedIn"]))
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
       header("Location: ../index.php");
       exit;
@@ -18,8 +18,8 @@
         $loginUser=$db->loginUser($emailData, $passwordData);
         if(!$loginUser["error"])
         {
-            setcookie("isLoggedIn", true, time()+3600, "/","", 0); 
-            setcookie("userData", $loginUser["userData"], time()+3600, "/","", 0);
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
             header("Location: ../index.php");
             exit;
         }
@@ -33,7 +33,7 @@
 ?>
 
 <?php
-  if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
+  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
   {
     $isLoggedIn = false;
   }
