@@ -3,7 +3,6 @@
   require_once $path . '/db_handler/web.php';
   if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
   {
-    echo "not logged in";
     $isLoggedIn = false;
   }
   else
@@ -173,7 +172,7 @@ echo '</div>';
 if(!$isLoggedIn)
 {
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick="window.open("user_session/sign_up.html", "_self");">';
+echo '<div class="toolbarUserSessionSignUp" onclick="return popitup(\"user_session/sign_up.html\")">';
 echo 'Sign Up';
 echo '</div>';
 echo '<div class="toolbarUserSessionLogIn" onclick="window.open("user_session/log_in.html", "_self");">';
