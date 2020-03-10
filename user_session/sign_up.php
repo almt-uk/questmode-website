@@ -1,5 +1,5 @@
 <?php
-  // Handle AJAX request (start)
+  $path = $_SERVER['DOCUMENT_ROOT'];
   session_start();
   if(isset($_POST['register']) && $_POST['register']) {
     
@@ -9,36 +9,14 @@
         $passwordData=$_POST['passwordData'];
         $usernameData=$_POST['usernameData'];
         $universityData=$_POST['universityData'];
+        require_once $path . '/db_handler/web.php';
         echo $emailData;
-    }
-    exit;
-  }
-  if(isset($_POST['ajax'])) {
-    if(isset($_POST['user_id']) && isset($_POST['type'])) {
-      if($_POST['type'] == 1) {
-        // foreach ($featured_profiles as $profile) {
-        //   if($profile->user_id == $_POST['user_id']) {
-        //     $name = $profile->name;
-        //   }
-        // }
-        // echo $name;
-      }
-    } else if(isset($_POST['logout'])) {
-
-      unset($_SESSION["loggedin"]);
-      unset($_SESSION["userData"]);
-      session_destroy();
-      header("Refresh:0");
-      exit;
-
     }
     exit;
   }
 ?>
 
 <?php
-  $path = $_SERVER['DOCUMENT_ROOT'];
-  require_once $path . '/db_handler/web.php';
   if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
   {
     $isLoggedIn = false;
@@ -347,7 +325,7 @@ echo 'usernameData: usernameData,';
 echo 'universityData: universityData';
 echo '},';
 echo 'success: function(response){';
-echo 'console.log("succeed");';
+echo 'console.log(response);';
 echo '}';
 echo '});';
 echo '}';
