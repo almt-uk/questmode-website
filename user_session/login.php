@@ -11,7 +11,7 @@
         $db = new DbHandlerWeb();
         $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
         $loginUser=$db->loginUser($emailData, $passwordData);
-        echo $loginUser["error"];
+        echo json_decode($loginUser["userData"])->user_id;
     }
     exit;
   }
@@ -25,7 +25,6 @@
   else
   {
     $isLoggedIn = true;
-    
   }
 ?>
 
