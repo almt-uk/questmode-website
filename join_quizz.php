@@ -28,6 +28,4473 @@
     }
   }
 ?>
+<?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+session_start();
+if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+{
+  header("Location: ../",  true);
+  exit;
+}
+$path = $_SERVER['DOCUMENT_ROOT'];
+if(isset($_POST['register']) && $_POST['register']) {
+  
+  if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+      $emailData=$_POST['emailData'];
+      $passwordData=$_POST['passwordData'];
+      require_once $path . '/db_handler/web.php';
+      require_once $path . '/libs/Utils/ip_details.php';
+      $db = new DbHandlerWeb();
+      $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+      $loginUser=$db->loginUser($emailData, $passwordData);
+      if(!$loginUser["error"])
+      {
+          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["userData"] = $loginUser["userData"];
+          exit;   
+      }
+      exit;
+  } else {
+      exit;
+  }
+}
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?><?php
+  session_start();
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['register']) && $_POST['register']) {
+    
+    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+        $emailData=$_POST['emailData'];
+        $passwordData=$_POST['passwordData'];
+        require_once $path . '/db_handler/web.php';
+        require_once $path . '/libs/Utils/ip_details.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $loginUser=$db->loginUser($emailData, $passwordData);
+        if(!$loginUser["error"])
+        {
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
+        }
+        exit;
+    } else {
+        exit;
+    }
+  }
+?>
 
 <?php
 echo '<head>';
