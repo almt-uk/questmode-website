@@ -310,8 +310,8 @@ echo '</script>';
 
 <?php
 echo '<script>';
-echo 'var btn = document.getElementById("myBtn");';
-echo 'btn.addEventListener("click", function() {';
+echo 'var toolbarUserSessionSignUp = document.getElementById("toolbarUserSessionSignUp");';
+echo 'toolbarUserSessionSignUp.addEventListener("click", function() {';
 echo 'document.location.href = ' . "user_session/sign_up.html";
 echo '});';
 echo '</script>';
