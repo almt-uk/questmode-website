@@ -1,4 +1,18 @@
 <?php
+
+if(isset($_POST['logout'])) {
+  unset($_SESSION["isLoggedIn"]);
+  unset($_SESSION["userData"]);
+  session_destroy();
+  header("Refresh:0");
+  exit;
+}
+
+}
+
+?>
+
+<?php
   $path = $_SERVER['DOCUMENT_ROOT'];
   require_once $path . '/db_handler/web.php';
   if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
@@ -199,9 +213,23 @@ echo '</div>';
 echo '<div class="userLoggedInOptionsItem">';
 echo 'Help & Support';
 echo '</div>';
-echo '<div class="userLoggedInOptionsItem">';
+echo '<div class="userLoggedInOptionsItem" onclick="logout()">';
 echo 'Log Out';
 echo '</div>';
+echo '<script>';
+echo 'function logout() {';
+echo '$.ajax({';
+echo 'type: "post",';
+echo 'data: {';
+echo 'ajax: 1,';
+echo 'logout: true';
+echo '},';
+echo 'success: function(response){';
+echo 'location.reload(true);';
+echo '}';
+echo '});';
+echo '}';
+echo '</script>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
