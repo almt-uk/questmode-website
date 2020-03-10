@@ -218,7 +218,8 @@ echo '</div>';
 echo '</div>';
 echo '<div class="rightHolder unselectable">';
 echo '<div class="rightSubolder">';
-echo '';
+if($isLoggedIn)
+{
 echo '<div class="quizzJoinHolder">';
 echo '<div class="quizzJoinTitle">';
 echo 'Join Quizz';
@@ -275,7 +276,7 @@ echo '<div class="quizzJoinBtn" onclick="window.open("quizz/create.html", "_self
 echo 'Create';
 echo '</div>';
 echo '</div>';
-echo '';
+}
 echo '</div>';
 echo '</div>';
 echo '</div>';
