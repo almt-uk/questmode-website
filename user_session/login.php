@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(isset($_COOKIE["userData"]))
+  if(isset($_COOKIE["userData"]) && isset($_COOKIE["loggedin"]))
   {
       header("Location: ../index.php");
       exit;
