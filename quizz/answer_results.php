@@ -282,7 +282,7 @@ echo 'setInterval(function() {';
 echo 'time--;';
 echo 'if(time == 0)';
 echo '{';
-echo 'window.open("results.html", "_self");';
+echo 'window.location = "../results";';
 echo '}';
 echo 'var countdownHolder = document.getElementById("countdownHolder");';
 echo 'var countdown = document.getElementById("countdownTime");';
