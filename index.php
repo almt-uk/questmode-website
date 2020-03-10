@@ -1,14 +1,14 @@
 <?php
 
-session_start();
-if(isset($_POST['logout']))
-{
-  unset($_SESSION["isLoggedIn"]);
-  unset($_SESSION["userData"]);
-  session_destroy();
-  header("Refresh:0");
-  exit;
-}
+  session_start();
+  if(isset($_POST['logout']))
+  {
+    unset($_SESSION["isLoggedIn"]);
+    unset($_SESSION["userData"]);
+    session_destroy();
+    header("Refresh:0");
+    exit;
+  }
 
 ?>
 
