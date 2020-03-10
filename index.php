@@ -214,6 +214,13 @@ echo '</div>';
 echo '</div>';
 echo '<div class="profileHolder">';
 echo '<div class="userLoggedInOptions">';
+if($isLoggedIn)
+{
+if(isset($_SESSION["userData"]))
+{
+$userData = json_decode($_SESSION["userData"]);
+if(!$userData->is_teacher)
+{
 echo '<div class="userLoggedInOptionsItem" onclick="goJoinQuizz();">';
 echo 'Join Quizz';
 echo '</div>';
@@ -222,6 +229,9 @@ echo 'function goJoinQuizz() {';
 echo 'window.location = "join";';
 echo '}';
 echo '</script>';
+}
+}
+}
 echo '<div class="userLoggedInOptionsItem">';
 echo 'Help & Support';
 echo '</div>';
