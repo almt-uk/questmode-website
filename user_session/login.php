@@ -319,7 +319,7 @@ echo 'Forgotten your details? <b><a href="help_sign_in.html">Get help signing in
 echo '</div>';
 echo '</div>';
 echo '<script type="text/javascript">';
-echo 'function tryRegister() {';
+echo 'function tryLogin() {';
 echo 'var emailData = document.getElementById("emailData").value;';
 echo 'var passwordData = document.getElementById("passwordData").value;';
 echo 'if(emailData.length != 0 && passwordData.length != 0)';
