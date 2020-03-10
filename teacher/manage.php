@@ -172,6 +172,9 @@ echo 'filter: drop-shadow(0px 0px 4px rgb(92, 92, 92));';
 echo '}';
 echo '</style>';
 echo '</head>';
+?>
+
+<?php
 echo '<body>';
 echo '<div class="toolbarHolder toolbarShadow unselectable" id="toolbar">';
 echo '<div class="toolbarContent">';
