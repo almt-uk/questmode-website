@@ -300,7 +300,7 @@ echo 'if(emailData.length != 0 && passwordData.length != 0 && usernameData.lengt
 echo '&& universityData.length != 0)';
 echo '{';
 echo '$.ajax({';
-echo 'type: 'post',';
+echo 'type: "post",';
 echo 'data: {';
 echo 'register: true,';
 echo 'emailData: emailData,';
