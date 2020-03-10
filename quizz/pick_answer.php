@@ -242,7 +242,7 @@ echo '}';
 echo '}';
 echo 'if(time == 0)';
 echo '{';
-echo 'window.open("answer_result.html", "_self");';
+echo 'window.location = "../answer_result";';
 echo '}';
 echo 'countdown.innerHTML = time + "s";';
 echo '}, 1000);';
