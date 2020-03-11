@@ -58,6 +58,7 @@ echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" 
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
 echo '<link rel="stylesheet" href="../assets/style/cookieConsent.css" type="text/css">';
 echo '<link rel="stylesheet" href="../assets/style/material.css" type="text/css">';
+echo '<link rel="stylesheet" href="../assets/style/toolbar.css" type="text/css">';
 echo '<script src="../assets/script/cookieConsent.js" type="text/javascript"></script>';
 echo '<style>';
 echo 'img[alt="www.000webhost.com"] {';
