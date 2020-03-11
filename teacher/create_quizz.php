@@ -1,9 +1,9 @@
 <?php
   session_start();
   $path = $_SERVER['DOCUMENT_ROOT'];
-  if(isset($_POST['register']) && $_POST['register']) {
+  if(isset($_POST['create_quizz']) && $_POST['create_quizz']) {
     
-    if(isset($_POST['emailData']) && isset($_POST['passwordData'])) {
+    if(isset($_POST['create_quizz']) && isset($_POST['passwordData'])) {
         $emailData=$_POST['emailData'];
         $passwordData=$_POST['passwordData'];
         require_once $path . '/db_handler/web.php';
