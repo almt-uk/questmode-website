@@ -79,6 +79,7 @@
             $answer_id = $answer_id4;
         }
         $db->answerQuestion($quizz_session_id, $answer_id, $question_id);
+        $_SESSION["answerChose"] = $answer;
         exit;
     } else {
         exit;
