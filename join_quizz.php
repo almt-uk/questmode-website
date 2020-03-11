@@ -36,7 +36,7 @@
         if(!$joinQuizz["error"])
         {
           $_SESSION["questionRowsData"] = $joinQuizz["questionRowsData"];
-          $_SESSION["session_id"] = $joinQuizz["session_id"];
+          $_SESSION["quizzSessionID"] = $joinQuizz["session_id"];
           $_SESSION["quizzData"] = $joinQuizz["quizzData"];
           header("Location: /waiting",  true);
           exit;
