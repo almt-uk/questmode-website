@@ -352,7 +352,7 @@ echo 'Create';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goCreateQuizz() {';
-echo 'window.location = "../quizz_create";';
+echo 'window.location = "../create_quizz";';
 echo '}';
 echo '</script>';
 echo '</div>';
