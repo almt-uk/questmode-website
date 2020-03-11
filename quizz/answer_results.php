@@ -286,6 +286,14 @@ echo '<div class="contentHolder">';
 echo '<div class="resultHolder" id="resultHolder">';
 echo '<div class="resultOption">';
 echo '<div class="resultOptionHolder answerOption1 resultFrame"';
+if($is_right1)
+{
+echo ' resultGood';
+}
+else if($answerChose)
+{
+echo ' resultWrong';
+}
 echo '>';
 echo '<div class="percentResult" style="height:95%;">';
 echo '</div>';
@@ -296,6 +304,14 @@ echo '</div>';
 echo '</div>';
 echo '<div class="resultOption">';
 echo '<div class="resultOptionHolder answerOption2 resultFrame"';
+if($is_right2)
+{
+echo ' resultGood';
+}
+else if($answerChose)
+{
+echo ' resultWrong';
+}
 echo '>';
 echo '<div class="percentResult" style="height:75%;">';
 echo '</div>';
@@ -306,6 +322,14 @@ echo '</div>';
 echo '</div>';
 echo '<div class="resultOption">';
 echo '<div class="resultOptionHolder answerOption3 resultFrame"';
+if($is_right3)
+{
+echo ' resultGood';
+}
+else if($answerChose)
+{
+echo ' resultWrong';
+}
 echo '>';
 echo '<div class="percentResult" style="height:70%;">';
 echo '</div>';
@@ -316,6 +340,14 @@ echo '</div>';
 echo '</div>';
 echo '<div class="resultOption">';
 echo '<div class="resultOptionHolder answerOption4 resultFrame"';
+if($is_right4)
+{
+echo ' resultGood';
+}
+else if($answerChose)
+{
+echo ' resultWrong';
+}
 echo '>';
 echo '<div class="percentResult" style="height:60%;">';
 echo '</div>';
