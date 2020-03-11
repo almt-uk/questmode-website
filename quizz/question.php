@@ -9,8 +9,13 @@
   }
 
   $quizzSessionID = $_SESSION["quizzSessionID"];
-  $questionRowsData = $_SESSION["questionRowsData"];
+  
   $quizzData = $_SESSION["quizzData"];
+  $quizz_id = $_SESSION["quizzData"]["quizz_id"];
+  $title = $_SESSION["quizzData"]["title"];
+
+  $questionRowsData = $_SESSION["questionRowsData"];
+  
   
 ?>
 
