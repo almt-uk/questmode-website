@@ -300,7 +300,7 @@ else if($answerChose)
 echo ' resultWrong';
 }
 echo '>';
-echo '<div class="percentResult" style="height:95%;">';
+echo '<div class="percentResult" style="height:' . 100-$percent1 . '%;">';
 echo '</div>';
 echo '<div class="percentResultNo">';
 echo $percent1 . '%';
@@ -318,7 +318,7 @@ else if($answerChose)
 echo ' resultWrong';
 }
 echo '>';
-echo '<div class="percentResult" style="height:75%;">';
+echo '<div class="percentResult" style="height:' . 100-$percent2 . '%;">';
 echo '</div>';
 echo '<div class="percentResultNo">';
 echo $percent2 . '%';
@@ -336,7 +336,7 @@ else if($answerChose)
 echo ' resultWrong';
 }
 echo '>';
-echo '<div class="percentResult" style="height:70%;">';
+echo '<div class="percentResult" style="height:' . 100-$percent3 . '%;">';
 echo '</div>';
 echo '<div class="percentResultNo">';
 echo $percent3 . '%';
@@ -354,7 +354,7 @@ else if($answerChose)
 echo ' resultWrong';
 }
 echo '>';
-echo '<div class="percentResult" style="height:60%;">';
+echo '<div class="percentResult" style="height:' . 100-$percent4 . '%;">';
 echo '</div>';
 echo '<div class="percentResultNo">';
 echo $percent4 . '%';
