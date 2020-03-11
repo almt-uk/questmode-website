@@ -17,7 +17,6 @@
 
   $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['create_quizz']) && $_POST['create_quizz']) {
-    
     if(isset($_POST['quizzData']) && isset($_POST['questions'])) {
         $quizzData=$_POST['quizzData'];
         $questions=$_POST['questions'];
