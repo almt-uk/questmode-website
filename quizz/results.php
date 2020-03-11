@@ -5,7 +5,7 @@
     header("Location: ../",  true);
     exit;
   }
-  
+
   if(!isset($_SESSION['isLoggedIn']))
   {
     $isLoggedIn = false;
@@ -212,6 +212,12 @@ echo 'top: 10px;';
 echo 'left: 50%;';
 echo 'transform: perspective(1px) translateX(-50%);';
 echo 'z-index: 1;';
+echo '}';
+echo '.countdownHolder:hover {';
+echo 'position: relative;';
+echo 'top: 10px;';
+echo 'left: 50%;';
+echo 'transform: perspective(1px) translateX(-50%) scale(0.9);';
 echo '}';
 echo '.countdownTime {';
 echo 'text-align: center;';
