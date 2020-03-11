@@ -6,23 +6,18 @@
     exit;
   }
 
-
   $quizzSessionID = $_SESSION["quizzSessionID"];
   $answerChose = $_SESSION["answerChose"];
   $currentQuestion = $_SESSION["currentQuestion"];
   $quizzData = $_SESSION["quizzData"];
   $questionRowsData = $_SESSION["questionRowsData"];
-  
+
   unset($_SESSION["quizzSessionID"]);
   unset($_SESSION["answerChose"]);
   unset($_SESSION["currentQuestion"]);
   unset($_SESSION["quizzData"]);
   unset($_SESSION["questionRowsData"]);
 
-
-
-
-  
   $path = $_SERVER['DOCUMENT_ROOT'];
   require_once $path . '/db_handler/web.php';
   $db = new DbHandlerWeb();
