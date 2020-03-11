@@ -373,7 +373,6 @@ echo '<div class="signUpTitle">';
 echo 'Sign Up';
 echo '</div>';
 echo '<form action="/register" method="post">';
-
 echo '<div class="inputRow">';
 echo '<div class="inputFormHolder">';
 echo '<label class="pure-material-textfield-outlined codeHolder">';
