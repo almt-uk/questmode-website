@@ -1,4 +1,88 @@
 <?php
+  session_start();
+  if(isset($_SESSION["quizzSessionID"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+
+  $answerChose = $_SESSION["answerChose"];
+  $_SESSION["answerChose"] = -1;
+
+  $quizzSessionID = $_SESSION["quizzSessionID"];
+
+  $currentQuestion = $_SESSION["currentQuestion"];
+  $_SESSION["currentQuestion"] = $currentQuestion + 1;
+
+  $quizzData = $_SESSION["quizzData"];
+  $quizz_id = $_SESSION["quizzData"]["quizz_id"];
+  $title = $_SESSION["quizzData"]["title"];
+
+  $questionRowsData = $_SESSION["questionRowsData"];
+
+  $questionData = $questionRowsData[$currentQuestion];
+  $question_id = $questionData["question_id"];
+  $experience = $questionData["experience"];
+  $content = $questionData["content"];
+  $image = $questionData["image"];
+  $quizz_id = $questionData["quizz_id"];
+  $time_question = $questionData["time_question"];
+  $time_answer = $questionData["time_answer"];
+  $time_results = $questionData["time_results"];
+  $questionAnswersData = $questionData["questionAnswersData"];
+  
+  $answerDetails1 = $questionAnswersData[0];
+  $answer_id1 = $questionOneDetails["answer_id"];
+  $question_id1 = $questionOneDetails["question_id"];
+  $content1 = $questionOneDetails["content"];
+  $is_right1 = $questionOneDetails["is_right"];
+  $order_id1 = $questionOneDetails["order_id"];
+  
+  $answerDetails2 = $questionAnswersData[1];
+  $answer_id2 = $questionOneDetails["answer_id"];
+  $question_id2 = $questionOneDetails["question_id"];
+  $content2 = $questionOneDetails["content"];
+  $is_right2 = $questionOneDetails["is_right"];
+  $order_id2 = $questionOneDetails["order_id"];
+  
+  $answerDetails3 = $questionAnswersData[2];
+  $answer_id3 = $questionOneDetails["answer_id"];
+  $question_id3 = $questionOneDetails["question_id"];
+  $content3 = $questionOneDetails["content"];
+  $is_right3 = $questionOneDetails["is_right"];
+  $order_id3 = $questionOneDetails["order_id"];
+  
+  $answerDetails4 = $questionAnswersData[3];
+  $answer_id4 = $questionOneDetails["answer_id"];
+  $question_id4 = $questionOneDetails["question_id"];
+  $content4 = $questionOneDetails["content"];
+  $is_right4 = $questionOneDetails["is_right"];
+  $order_id4 = $questionOneDetails["order_id"];
+  
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  require_once $path . '/db_handler/web.php';
+  $db = new DbHandlerWeb();
+  $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+
+  $answer_order = 1;
+  $no_answers_1 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];  
+  $answer_order = 2;
+  $no_answers_2 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];  
+  $answer_order = 3;
+  $no_answers_3 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];  
+  $answer_order = 4;
+  $no_answers_4 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];
+
+  $total_answers = $no_answers_1 + $no_answers_2 + $no_answers_3 + $no_answers_4;
+
+  $percent1 = $no_answers_1 * 100 / $total_answers;
+  $percent2 = $no_answers_2 * 100 / $total_answers;
+  $percent3 = $no_answers_3 * 100 / $total_answers;
+  $percent4 = $no_answers_4 * 100 / $total_answers;
+  
+?>
+
+<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
