@@ -27,7 +27,14 @@
   $time_question = $questionData["time_question"];
   $time_answer = $questionData["time_answer"];
   $time_results = $questionData["time_results"];
+  $questionAnswersData = $questionData["questionAnswersData"];
   
+  $questionOneDetails = $questionAnswersData[0];
+  $answer_id = $questionOneDetails["answer_id"];
+  $question_id = $questionOneDetails["question_id"];
+  $content = $questionOneDetails["content"];
+  $is_right = $questionOneDetails["is_right"];
+  $order_id = $questionOneDetails["order_id"];
   
 ?>
 
