@@ -158,7 +158,7 @@ echo '</head>';
 echo '<body>';
 echo '<div class="contentHolder unselectable">';
 echo '<div class="questionContent">';
-echo 'Where is the University of Northampton located?';
+echo $content;
 echo '</div>';
 echo '</div>';
 echo '<div class="countdownHolder unselectable" id="countdownHolder">';
@@ -171,7 +171,7 @@ echo '<div>To help personalise content and provide a safer experience, we use co
 echo '</div>';
 echo '</body>';
 echo '<script>';
-echo 'var time = 5;';
+echo 'var time = ' . $time_question . ';';
 echo 'document.getElementById("countdownTime").innerHTML = time + "s";';
 echo 'setInterval(function() {';
 echo 'time--;';
