@@ -402,7 +402,14 @@ echo 'setInterval(function() {';
 echo 'time--;';
 echo 'if(time == 0)';
 echo '{';
-echo 'window.location = "../results";';
+if($currentQuestion + 1 < count($questionRowsData))
+{
+    echo 'window.location = "../question";';
+}
+else
+{
+    echo 'window.location = "../results";';
+}
 echo '}';
 echo 'var countdownHolder = document.getElementById("countdownHolder");';
 echo 'var countdown = document.getElementById("countdownTime");';
