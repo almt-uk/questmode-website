@@ -312,6 +312,16 @@ echo '{';
 echo 'countdownHolder.classList.add("answerChose");';
 echo '}';
 echo 'choice = answer;';
+echo '$.ajax({';
+echo 'type: "post",';
+echo 'data: {';
+echo 'pick_answer: true,';
+echo 'answer: choice';
+echo '},';
+echo 'success: function(response){';
+echo '';
+echo '}';
+echo '});';
 echo '}';
 echo '</script>';
 ?>
