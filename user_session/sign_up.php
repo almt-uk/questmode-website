@@ -9,7 +9,7 @@
   if(isset($_POST['register']) && $_POST['register']) {
     
     if(isset($_POST['emailData']) && isset($_POST['passwordData']) && isset($_POST['usernameData'])
-        && isset($_POST['universityData'])) {
+      && isset($_POST['universityData']) && isset($_POST['universityData'])) {
         $emailData=$_POST['emailData'];
         $passwordData=$_POST['passwordData'];
         $usernameData=$_POST['usernameData'];
