@@ -7,6 +7,7 @@
   }
 
   $answerChose = $_SESSION["answerChose"];
+  $_SESSION["answerChose"] = -1;
 
   $quizzSessionID = $_SESSION["quizzSessionID"];
 
