@@ -1,9 +1,9 @@
 <?php
   session_start();
-  if(isset($_COOKIE["userData"]) && isset($_COOKIE["loggedin"]))
+  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
-      header("Location: ../index.php");
-      exit;
+    header("Location: ../",  true);
+    exit;
   }
   $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['register']) && $_POST['register']) {
@@ -18,22 +18,19 @@
         $loginUser=$db->loginUser($emailData, $passwordData);
         if(!$loginUser["error"])
         {
-            setcookie("loggedin", true, time()+3600, "/","", 0); 
-            setcookie("userData", $loginUser["userData"], time()+3600, "/","", 0);
-            header("Location: ../index.php");
-            exit;
+            $_SESSION["isLoggedIn"] = true;
+            $_SESSION["userData"] = $loginUser["userData"];
+            exit;   
         }
-        else
-        {
-
-        }
+        exit;
+    } else {
+        exit;
     }
-    exit;
   }
 ?>
 
 <?php
-  if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
+  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
   {
     $isLoggedIn = false;
   }
@@ -47,7 +44,6 @@
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>Log In | Quest Mode</title>';
 echo '';
@@ -297,7 +293,7 @@ echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goRegister() {';
-echo 'window.location = "sign_up";';
+echo 'window.location = "signup";';
 echo '}';
 echo '</script>';
 echo '</div>';

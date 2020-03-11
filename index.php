@@ -1,13 +1,27 @@
 <?php
+
+session_start();
+if(isset($_POST['logout']))
+{
+  unset($_SESSION["isLoggedIn"]);
+  unset($_SESSION["userData"]);
+  session_destroy();
+  header("Refresh:0");
+  exit;
+}
+
+?>
+
+<?php
   $path = $_SERVER['DOCUMENT_ROOT'];
   require_once $path . '/db_handler/web.php';
-  if(!isset($_COOKIE['isLoggedIn']) || !$_COOKIE['isLoggedIn'])
+  if(!isset($_SESSION['isLoggedIn']))
   {
     $isLoggedIn = false;
   }
   else
   {
-    $isLoggedIn = true;
+    $isLoggedIn = $_SESSION['isLoggedIn'];
   }
 ?>
 
@@ -15,7 +29,6 @@
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>Quest Mode</title>';
 echo '<!-- Disable tap highlight on IE -->';
@@ -164,12 +177,22 @@ echo '</div>';
 if(!$isLoggedIn)
 {
 echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" id="toolbarUserSessionSignUp">';
+echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();">';
 echo 'Sign Up';
 echo '</div>';
-echo '<div class="toolbarUserSessionLogIn" onclick="window.open("user_session/log_in.html", "_self");">';
+echo '<script type="text/javascript">';
+echo 'function goRegister() {';
+echo 'window.location = "signup";';
+echo '}';
+echo '</script>';
+echo '<div class="toolbarUserSessionLogIn" onclick="goLogin();">';
 echo 'Log In';
 echo '</div>';
+echo '<script type="text/javascript">';
+echo 'function goLogin() {';
+echo 'window.location = "login";';
+echo '}';
+echo '</script>';
 echo '</div>';
 }
 else
@@ -199,9 +222,23 @@ echo '</div>';
 echo '<div class="userLoggedInOptionsItem">';
 echo 'Help & Support';
 echo '</div>';
-echo '<div class="userLoggedInOptionsItem">';
+echo '<div class="userLoggedInOptionsItem" onclick="logout()">';
 echo 'Log Out';
 echo '</div>';
+echo '<script>';
+echo 'function logout() {';
+echo '$.ajax({';
+echo 'type: "post",';
+echo 'data: {';
+echo 'ajax: 1,';
+echo 'logout: true';
+echo '},';
+echo 'success: function(response){';
+echo 'location.reload(true);';
+echo '}';
+echo '});';
+echo '}';
+echo '</script>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
@@ -218,6 +255,11 @@ echo '</div>';
 echo '<div class="rightHolder unselectable">';
 echo '<div class="rightSubolder">';
 if($isLoggedIn)
+{
+if(isset($_SESSION["userData"]))
+{
+$userData = json_decode($_SESSION["userData"]);
+if(!$userData->is_teacher)
 {
 echo '<div class="quizzJoinHolder">';
 echo '<div class="quizzJoinTitle">';
@@ -251,7 +293,9 @@ echo '<div class="quizzJoinSubtitle">';
 echo '47. Name 143474575 (LVL 14)';
 echo '</div>';
 echo '</div>';
-echo '';
+}
+else
+{
 echo '<div class="quizzJoinHolder">';
 echo '<div class="quizzJoinTitle">';
 echo 'Manage Classes';
@@ -276,21 +320,19 @@ echo 'Create';
 echo '</div>';
 echo '</div>';
 }
+}
+}
 echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
-echo '';
 echo '<div id="myCookieConsent">';
 echo '<a id="cookieButton">Understood</a>';
 echo '<div>To help personalise content and provide a safer experience, we use cookies. By clicking on or navigating the site, you agree to allow us to collect information on and off Quest Mode through cookies. Learn more, including about available controls: <a href="/">Cookie Policy</a>.</div>';
 echo '</div>';
-echo '';
 echo '</body>';
-echo '';
 echo '<script>';
 echo 'document.body.addEventListener("click", function (evt) {';
-echo '//note evt.target can be a nested element, not the body element, resulting in misfires';
 echo 'var userLoggedInDetails = document.getElementById("userLoggedInDetails");';
 echo 'if(userLoggedInDetails != null)';
 echo '{';
@@ -304,15 +346,6 @@ echo '} else {';
 echo 'userLoggedInDetails.classList.add("hideElement");';
 echo '}';
 echo '}';
-echo '});';
-echo '</script>';
-?>
-
-<?php
-echo '<script>';
-echo 'var toolbarUserSessionSignUp = document.getElementById("toolbarUserSessionSignUp");';
-echo 'toolbarUserSessionSignUp.addEventListener("click", function() {';
-echo 'document.location.href = ' . "user_session/sign_up.html";
 echo '});';
 echo '</script>';
 ?>
