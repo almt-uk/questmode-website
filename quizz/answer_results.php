@@ -404,11 +404,11 @@ echo 'if(time == 0)';
 echo '{';
 if($currentQuestion + 1 < count($questionRowsData))
 {
-    echo 'window.location = "../question";';
+    echo 'window.location = "../quizz/question";';
 }
 else
 {
-    echo 'window.location = "../results";';
+    echo 'window.location = "../quizz/ranks";';
 }
 echo '}';
 echo 'var countdownHolder = document.getElementById("countdownHolder");';
