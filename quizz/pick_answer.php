@@ -331,7 +331,7 @@ echo '}';
 echo '}';
 echo 'if(time == 0)';
 echo '{';
-echo 'window.location = "../answer_result";';
+echo 'window.location = "../quizz/results";';
 echo '}';
 echo 'countdown.innerHTML = time + "s";';
 echo '}, 1000);';
