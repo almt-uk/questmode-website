@@ -394,7 +394,7 @@ echo '<div>To help personalise content and provide a safer experience, we use co
 echo '</div>';
 echo '</body>';
 echo '<script>';
-echo 'var time = 5;';
+echo 'var time = ' . $time_results . ';';
 echo 'document.getElementById("countdownTime").innerHTML = time + "s";';
 echo 'setInterval(function() {';
 echo 'time--;';
