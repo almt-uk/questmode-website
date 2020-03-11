@@ -1,5 +1,6 @@
 <?php
   session_start();
+  error_reporting(E_ERROR | E_WARNING | E_PARSE);
   if(isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'])
   {
     if(isset($_SESSION["userData"]))
@@ -39,7 +40,7 @@
           $_SESSION["quizzSessionID"] = $joinQuizz["session_id"];
           $_SESSION["quizzData"] = $joinQuizz["quizzData"];
           $_SESSION["currentQuestion"] = 0;
-          header("Location: /quizz/wait",  true);
+          header("Location: ../../quizz/wait");
           exit;
         }
         exit;
@@ -65,9 +66,9 @@ echo '<meta name="theme-color" content="#ffffff">';
 echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
 echo '<link rel="stylesheet" href="../../assets/style/cookieConsent.css" type="text/css">';
-echo '<link rel="stylesheet" href="assets/style/material.css" type="text/css">';
+echo '<link rel="stylesheet" href="../../assets/style/material.css" type="text/css">';
 echo '<link rel="stylesheet" href="../../assets/style/toolbar.css" type="text/css">';
-echo '<script src="assets/script/cookieConsent.js" type="text/javascript"></script>';
+echo '<script src="../../assets/script/cookieConsent.js" type="text/javascript"></script>';
 echo '<style>';
 echo 'img[alt="www.000webhost.com"] {';
 echo 'display: none !important;';
@@ -284,11 +285,11 @@ echo 'quizzCode: document.getElementById("quizzCode").value,';
 echo 'quizzNickname: document.getElementById("quizzNickname").value';
 echo '},';
 echo 'success: function(response){';
-echo '';
-echo '}';
-echo '});';
 echo 'document.getElementById("quizzCode").value = "";';
 echo 'document.getElementById("quizzNickname").value = "";';
+echo 'window.location = "/quizz/wait";';
+echo '}';
+echo '});';
 echo '}';
 echo '}';
 echo '$("#quizzNickname").keyup(function (e) {';
