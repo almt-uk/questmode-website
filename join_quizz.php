@@ -23,6 +23,21 @@
     header("Refresh:0");
     exit;
   }
+
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['joinQuizz']) && $_POST['joinQuizz']) {
+    if(isset($_POST['quizzCode']) && isset($_POST['quizzNickname'])) {
+        $quizzCode=$_POST['quizzCode'];
+        $quizzNickname=$_POST['quizzNickname'];
+        require_once $path . '/db_handler/web.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $db->publishQuizz($quizzData, $questions, $userData->user_id);
+        exit;
+    } else {
+        exit;
+    }
+  }
 ?>
 
 <?php
