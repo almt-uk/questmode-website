@@ -1,10 +1,5 @@
 <?php
   session_start();
-  if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
-  {
-    header("Location: ../",  true);
-    exit;
-  }
   $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['register']) && $_POST['register']) {
     
