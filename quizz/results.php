@@ -425,6 +425,8 @@ echo '<div class="expGainedContent">';
 echo '2918 EXP';
 echo '</div>';
 echo '</div>';
+if(!$isLoggedIn)
+{
 echo '<div class="notLoggedIn">';
 echo '<div class="userSessionHolder">';
 echo '<div class="logInHolder">';
@@ -450,6 +452,7 @@ echo '</div>';
 echo '<div class="heroClassHolder">';
 echo '<img class="heroClassImg"/>';
 echo '</div>';
+}
 echo '</div>';
 echo '</div>';
 echo '</div>';
