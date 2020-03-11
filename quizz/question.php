@@ -7,6 +7,11 @@
     header("Location: ../",  true);
     exit;
   }
+
+  $quizzSessionID = $_SESSION["quizzSessionID"];
+  $questionRowsData = $_SESSION["questionRowsData"];
+  $quizzData = $_SESSION["quizzData"];
+  
 ?>
 
 <?php
