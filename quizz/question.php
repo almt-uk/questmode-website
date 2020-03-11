@@ -1,4 +1,15 @@
 <?php
+  session_start();
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  require_once $path . '/db_handler/web.php';
+  if(isset($_SESSION["quizzSessionID"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
+?>
+
+<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
