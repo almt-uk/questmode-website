@@ -365,7 +365,7 @@ echo '<div class="leadingHolder">';
 echo '<div class="leadingSubolder">';
 echo '<div class="leadingCentralize">';
 echo '<div class="inLeadTitle">';
-echo 'Is Leading';
+echo 'Is Leading *DEMO*';
 echo '</div>';
 echo '<div class="inLeadNickname">';
 echo 'RootRice';
