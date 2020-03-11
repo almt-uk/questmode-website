@@ -332,7 +332,7 @@ echo 'emailData: emailData,';
 echo 'passwordData: passwordData';
 echo '},';
 echo 'success: function(response){';
-echo 'console.log(response);';
+echo 'location.reload(true);';
 echo '}';
 echo '});';
 echo '}';
