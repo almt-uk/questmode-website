@@ -35,7 +35,7 @@
         $joinQuizz = $db->joinQuizz($quizzCode, $quizzNickname);
         if(!$joinQuizz["error"])
         {
-
+          $_SESSION["isLoggedIn"] = true;
         }
         exit;
     } else {
