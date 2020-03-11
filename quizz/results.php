@@ -417,7 +417,12 @@ echo '</div>';
 echo '</a>';
 echo '</div>';
 echo '<div class="gainExpHolder resultFrame">';
-echo '<div class="expGainedHolder">';
+echo '<div class="expGainedHolder';
+if($isLoggedIn)
+{
+echo ' expGainedHolderExtra';
+}
+echo '">';
 echo '<div class="expGainedTitle">';
 echo 'You have gained';
 echo '</div>';
