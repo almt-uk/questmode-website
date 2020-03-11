@@ -63,22 +63,6 @@
   require_once $path . '/db_handler/web.php';
   $db = new DbHandlerWeb();
   $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
-
-  $answer_order = 1;
-  $no_answers_1 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];  
-  $answer_order = 2;
-  $no_answers_2 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];  
-  $answer_order = 3;
-  $no_answers_3 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];  
-  $answer_order = 4;
-  $no_answers_4 = $db->getPlayersByAnswerChose($question_id, $answer_order)["no_answers"];
-
-  $total_answers = $no_answers_1 + $no_answers_2 + $no_answers_3 + $no_answers_4;
-
-  $percent1 = $no_answers_1 * 100 / $total_answers;
-  $percent2 = $no_answers_2 * 100 / $total_answers;
-  $percent3 = $no_answers_3 * 100 / $total_answers;
-  $percent4 = $no_answers_4 * 100 / $total_answers;
   
 ?>
 
