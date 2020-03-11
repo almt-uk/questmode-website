@@ -215,7 +215,7 @@ echo 'Join Quizz';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goJoinQuizz() {';
-echo 'window.location = "join";';
+echo 'window.location = "/quizz/join";';
 echo '}';
 echo '</script>';
 echo '<div class="userLoggedInOptionsItem">';
