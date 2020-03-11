@@ -62,16 +62,7 @@
         require_once $path . '/db_handler/web.php';
         $db = new DbHandlerWeb();
         $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
-        $joinQuizz = $db->joinQuizz($quizzCode, $quizzNickname);
-        if(!$joinQuizz["error"])
-        {
-          $_SESSION["questionRowsData"] = $joinQuizz["questionRowsData"];
-          $_SESSION["quizzSessionID"] = $joinQuizz["session_id"];
-          $_SESSION["quizzData"] = $joinQuizz["quizzData"];
-          $_SESSION["currentQuestion"] = 0;
-          header("Location: /waiting",  true);
-          exit;
-        }
+        $db->answerQuestion($quizzCode, $quizzNickname);
         exit;
     } else {
         exit;
