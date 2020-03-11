@@ -5,6 +5,15 @@
     header("Location: ../",  true);
     exit;
   }
+  
+  if(!isset($_SESSION['isLoggedIn']))
+  {
+    $isLoggedIn = false;
+  }
+  else
+  {
+    $isLoggedIn = $_SESSION['isLoggedIn'];
+  }
 
   $quizzSessionID = $_SESSION["quizzSessionID"];
   $answerChose = $_SESSION["answerChose"];
