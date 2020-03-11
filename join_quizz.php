@@ -60,7 +60,7 @@ echo '<!-- Web Application Manifest -->';
 echo '<link rel="manifest" href="manifest.json">';
 echo '<!-- Add to homescreen for Chrome on Android -->';
 echo '<meta name="mobile-web-app-capable" content="yes">';
-echo '<meta name="application-name" content="ZeoFlow">';
+echo '<meta name="application-name" content="Quest Mode">';
 echo '<meta name="theme-color" content="#ffffff">';
 echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
