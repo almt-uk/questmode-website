@@ -242,4 +242,14 @@ echo '}';
 echo '}';
 echo '});';
 echo '</script>';
+echo '<script>';
+echo 'var time12 = 3;';
+echo 'setInterval(function() {';
+echo 'time12--;';
+echo 'if(time12 == 0)';
+echo '{';
+echo 'window.location = "question";';
+echo '}';
+echo '}, 1000);';
+echo '</script>';
 ?>
