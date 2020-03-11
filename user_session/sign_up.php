@@ -9,18 +9,18 @@
   if(isset($_POST['register']) && $_POST['register']) {
     
     if(isset($_POST['emailData']) && isset($_POST['passwordData']) && isset($_POST['usernameData'])
-      && isset($_POST['universityData']) && isset($_POST['universityData'])) {
+      && isset($_POST['universityData']) && isset($_POST['heroSelected'])) {
         $emailData=$_POST['emailData'];
         $passwordData=$_POST['passwordData'];
         $usernameData=$_POST['usernameData'];
         $universityData=$_POST['universityData'];
+        $heroSelected=$_POST['heroSelected'];
         require_once $path . '/db_handler/web.php';
         require_once $path . '/libs/Utils/ip_details.php';
         $db = new DbHandlerWeb();
         $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
         $registerUser=$db->registerUser($emailData, $passwordData, $usernameData, $universityData,
-            getIPDetails()->geoplugin_countryCode);
-        echo $registerUser["error"];
+            getIPDetails()->geoplugin_countryCode, $heroSelected);
     }
     exit;
   }
