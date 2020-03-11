@@ -1,9 +1,51 @@
 <?php
   session_start();
-  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
+  if(isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'])
   {
-    header("Location: /",  true);
+    if(isset($_SESSION["userData"]))
+    {
+        $userData = json_decode($_SESSION["userData"]);
+        if(!$userData->is_teacher)
+        {
+            header("Location: /",  true);
+            exit;
+        }
+    }
+  }
+?>
+
+<?php
+  if(isset($_POST['logout']))
+  {
+    unset($_SESSION["isLoggedIn"]);
+    unset($_SESSION["userData"]);
+    session_destroy();
+    header("Refresh:0");
     exit;
+  }
+
+  $path = $_SERVER['DOCUMENT_ROOT'];
+  if(isset($_POST['joinQuizz']) && $_POST['joinQuizz']) {
+    if(isset($_POST['quizzCode']) && isset($_POST['quizzNickname'])) {
+        $quizzCode=$_POST['quizzCode'];
+        $quizzNickname=$_POST['quizzNickname'];
+        require_once $path . '/db_handler/web.php';
+        $db = new DbHandlerWeb();
+        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
+        $joinQuizz = $db->joinQuizz($quizzCode, $quizzNickname);
+        if(!$joinQuizz["error"])
+        {
+          $_SESSION["questionRowsData"] = $joinQuizz["questionRowsData"];
+          $_SESSION["quizzSessionID"] = $joinQuizz["session_id"];
+          $_SESSION["quizzData"] = $joinQuizz["quizzData"];
+          $_SESSION["currentQuestion"] = 0;
+          header("Location: /quizz/wait",  true);
+          exit;
+        }
+        exit;
+    } else {
+        exit;
+    }
   }
 ?>
 
@@ -18,7 +60,7 @@ echo '<!-- Web Application Manifest -->';
 echo '<link rel="manifest" href="manifest.json">';
 echo '<!-- Add to homescreen for Chrome on Android -->';
 echo '<meta name="mobile-web-app-capable" content="yes">';
-echo '<meta name="application-name" content="ZeoFlow">';
+echo '<meta name="application-name" content="Quest Mode">';
 echo '<meta name="theme-color" content="#ffffff">';
 echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
@@ -173,15 +215,29 @@ echo 'Join Quizz';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goJoinQuizz() {';
-echo 'window.location = "join";';
+echo 'window.location = "/quizz/join";';
 echo '}';
 echo '</script>';
 echo '<div class="userLoggedInOptionsItem">';
 echo 'Help & Support';
 echo '</div>';
-echo '<div class="userLoggedInOptionsItem">';
+echo '<div class="userLoggedInOptionsItem" onclick="logout()">';
 echo 'Log Out';
 echo '</div>';
+echo '<script>';
+echo 'function logout() {';
+echo '$.ajax({';
+echo 'type: "post",';
+echo 'data: {';
+echo 'ajax: 1,';
+echo 'logout: true';
+echo '},';
+echo 'success: function(response){';
+echo 'location.reload(true);';
+echo '}';
+echo '});';
+echo '}';
+echo '</script>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
@@ -220,9 +276,19 @@ echo '{';
 echo 'if(document.getElementById("quizzCode").value.length != 0';
 echo '&& document.getElementById("quizzNickname").value.length != 0)';
 echo '{';
+echo '$.ajax({';
+echo 'type: "post",';
+echo 'data: {';
+echo 'joinQuizz: true,';
+echo 'quizzCode: document.getElementById("quizzCode").value,';
+echo 'quizzNickname: document.getElementById("quizzNickname").value';
+echo '},';
+echo 'success: function(response){';
+echo '';
+echo '}';
+echo '});';
 echo 'document.getElementById("quizzCode").value = "";';
 echo 'document.getElementById("quizzNickname").value = "";';
-echo 'window.open("quizz/waiting.html", "_self");';
 echo '}';
 echo '}';
 echo '$("#quizzNickname").keyup(function (e) {';

@@ -17,10 +17,20 @@
 ?>
 
 <?php
+  if(isset($_POST['logout']))
+  {
+    unset($_SESSION["isLoggedIn"]);
+    unset($_SESSION["userData"]);
+    session_destroy();
+    header("Refresh:0");
+    exit;
+  }
+?>
+
+<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>Manage Class | Quest Mode</title>';
 echo '<!-- Disable tap highlight on IE -->';
@@ -226,9 +236,23 @@ echo '<div class="userLoggedInOptions">';
 echo '<div class="userLoggedInOptionsItem">';
 echo 'Help & Support';
 echo '</div>';
-echo '<div class="userLoggedInOptionsItem">';
+echo '<div class="userLoggedInOptionsItem" onclick="logout()">';
 echo 'Log Out';
 echo '</div>';
+echo '<script>';
+echo 'function logout() {';
+echo '$.ajax({';
+echo 'type: "post",';
+echo 'data: {';
+echo 'ajax: 1,';
+echo 'logout: true';
+echo '},';
+echo 'success: function(response){';
+echo 'location.reload(true);';
+echo '}';
+echo '});';
+echo '}';
+echo '</script>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
@@ -245,12 +269,12 @@ echo '</div>';
 echo '<div class="quizzJoinSubtitle">';
 echo 'Do you want to create a new class?';
 echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="goCreateQuizz();">';
+echo '<div class="quizzJoinBtn" onclick="goCreateClass();">';
 echo 'Create';
 echo '</div>';
 echo '<script type="text/javascript">';
-echo 'function goCreateQuizz() {';
-echo 'window.location = "../create_quizz";';
+echo 'function goCreateClass() {';
+echo 'window.location = "../teacher/class/create";';
 echo '}';
 echo '</script>';
 echo '</div>';
@@ -260,7 +284,7 @@ echo 'Classes';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goViewClass() {';
-echo 'window.location = "../class_view";';
+echo 'window.location = "../teacher/class/view";';
 echo '}';
 echo '</script>';
 echo '<div class="classesHolder" onclick="goViewClass();">';
@@ -323,9 +347,14 @@ echo '</div>';
 echo '<div class="quizzCreateContent">';
 echo 'Do you want to create a new quizz?';
 echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="window.open('../quizz/create.html', '_self');">';
+echo '<div class="quizzJoinBtn" onclick="goCreateQuizz();">';
 echo 'Create';
 echo '</div>';
+echo '<script type="text/javascript">';
+echo 'function goCreateQuizz() {';
+echo 'window.location = "../teacher/quizz/create";';
+echo '}';
+echo '</script>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
