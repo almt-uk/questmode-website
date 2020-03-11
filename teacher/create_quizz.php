@@ -14,7 +14,7 @@
         exit;
     }
   }
-  
+
   $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['create_quizz']) && $_POST['create_quizz']) {
     
@@ -25,13 +25,7 @@
         require_once $path . '/libs/Utils/ip_details.php';
         $db = new DbHandlerWeb();
         $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
-        $loginUser=$db->publishQuizz($quizzData, $questions);
-        if(!$loginUser["error"])
-        {
-            $_SESSION["isLoggedIn"] = true;
-            $_SESSION["userData"] = $loginUser["userData"];
-            exit;   
-        }
+        $db->publishQuizz($quizzData, $questions, $userData->user_id);
         exit;
     } else {
         exit;
