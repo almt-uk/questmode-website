@@ -177,7 +177,7 @@ echo 'setInterval(function() {';
 echo 'time--;';
 echo 'if(time == 0)';
 echo '{';
-echo 'window.location = "../pick_answer";';
+echo 'window.location = "../quizz/answer";';
 echo '}';
 echo 'var countdownHolder = document.getElementById("countdownHolder");';
 echo 'var countdown = document.getElementById("countdownTime");';
