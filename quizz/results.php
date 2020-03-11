@@ -444,7 +444,7 @@ echo '}';
 echo '</script>';
 echo '</div>';
 echo '<div class="userSessionHolder">';
-echo '<div class="signUpHolder">';
+echo '<div class="signUpHolder" onclick="goRegister();">';
 echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
