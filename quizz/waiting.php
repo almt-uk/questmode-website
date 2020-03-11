@@ -33,6 +33,11 @@
         }
     }
   }
+  if(isset($_SESSION["quizzSessionID"]))
+  {
+    header("Location: ../",  true);
+    exit;
+  }
 ?>
 
 <?php
