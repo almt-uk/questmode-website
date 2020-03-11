@@ -9,12 +9,24 @@
   }
 
   $quizzSessionID = $_SESSION["quizzSessionID"];
-  
+
+  $currentQuestion = $_SESSION["currentQuestion"];
+
   $quizzData = $_SESSION["quizzData"];
   $quizz_id = $_SESSION["quizzData"]["quizz_id"];
   $title = $_SESSION["quizzData"]["title"];
 
   $questionRowsData = $_SESSION["questionRowsData"];
+
+  $questionData = $questionRowsData[$currentQuestion];
+  $question_id = $questionData["question_id"];
+  $experience = $questionData["experience"];
+  $content = $questionData["content"];
+  $image = $questionData["image"];
+  $quizz_id = $questionData["quizz_id"];
+  $time_question = $questionData["time_question"];
+  $time_answer = $questionData["time_answer"];
+  $time_results = $questionData["time_results"];
   
   
 ?>
