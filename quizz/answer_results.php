@@ -12,6 +12,7 @@
   $quizzSessionID = $_SESSION["quizzSessionID"];
 
   $currentQuestion = $_SESSION["currentQuestion"];
+  $_SESSION["currentQuestion"] = $currentQuestion + 1;
 
   $quizzData = $_SESSION["quizzData"];
   $quizz_id = $_SESSION["quizzData"]["quizz_id"];
