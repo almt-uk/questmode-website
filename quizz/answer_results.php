@@ -6,6 +6,8 @@
     exit;
   }
 
+  $answerChose = $_SESSION["answerChose"];
+
   $quizzSessionID = $_SESSION["quizzSessionID"];
 
   $currentQuestion = $_SESSION["currentQuestion"];
