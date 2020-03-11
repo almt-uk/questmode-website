@@ -62,7 +62,23 @@
         require_once $path . '/db_handler/web.php';
         $db = new DbHandlerWeb();
         $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
-        $db->answerQuestion($quizzCode, $quizzNickname);
+        if($answer == 1)
+        {
+            $answer_id = $answer_id1;
+        }
+        else if($answer == 2)
+        {
+            $answer_id = $answer_id2;
+        }
+        else if($answer == 3)
+        {
+            $answer_id = $answer_id3;
+        }
+        else if($answer == 4)
+        {
+            $answer_id = $answer_id4;
+        }
+        $db->answerQuestion($quizz_session_id, $answer_id);
         exit;
     } else {
         exit;
