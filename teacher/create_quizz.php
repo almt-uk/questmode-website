@@ -14,6 +14,7 @@
         exit;
     }
   }
+  
   $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_POST['create_quizz']) && $_POST['create_quizz']) {
     
