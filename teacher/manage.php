@@ -17,6 +17,17 @@
 ?>
 
 <?php
+  if(isset($_POST['logout']))
+  {
+    unset($_SESSION["isLoggedIn"]);
+    unset($_SESSION["userData"]);
+    session_destroy();
+    header("Refresh:0");
+    exit;
+  }
+?>
+
+<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
@@ -225,9 +236,23 @@ echo '<div class="userLoggedInOptions">';
 echo '<div class="userLoggedInOptionsItem">';
 echo 'Help & Support';
 echo '</div>';
-echo '<div class="userLoggedInOptionsItem">';
+echo '<div class="userLoggedInOptionsItem" onclick="logout()">';
 echo 'Log Out';
 echo '</div>';
+echo '<script>';
+echo 'function logout() {';
+echo '$.ajax({';
+echo 'type: "post",';
+echo 'data: {';
+echo 'ajax: 1,';
+echo 'logout: true';
+echo '},';
+echo 'success: function(response){';
+echo 'location.reload(true);';
+echo '}';
+echo '});';
+echo '}';
+echo '</script>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
