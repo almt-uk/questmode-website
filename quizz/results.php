@@ -31,7 +31,7 @@ echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
 echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-echo '<title>Quest Results</title>';
+echo '<title>Quizz Results</title>';
 echo '<!-- Disable tap highlight on IE -->';
 echo '<meta name="msapplication-tap-highlight" content="no">';
 echo '<!-- Web Application Manifest -->';
