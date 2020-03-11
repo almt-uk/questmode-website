@@ -78,7 +78,7 @@
         {
             $answer_id = $answer_id4;
         }
-        $db->answerQuestion($quizz_session_id, $answer_id);
+        $db->answerQuestion($quizz_session_id, $answer_id, $question_id);
         exit;
     } else {
         exit;
