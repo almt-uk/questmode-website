@@ -1,7 +1,5 @@
 <?php
   session_start();
-  $path = $_SERVER['DOCUMENT_ROOT'];
-  require_once $path . '/db_handler/web.php';
   if(isset($_SESSION["quizzSessionID"]))
   {
     header("Location: ../",  true);
