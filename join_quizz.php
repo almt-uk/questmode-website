@@ -38,6 +38,7 @@
           $_SESSION["questionRowsData"] = $joinQuizz["questionRowsData"];
           $_SESSION["quizzSessionID"] = $joinQuizz["session_id"];
           $_SESSION["quizzData"] = $joinQuizz["quizzData"];
+          $_SESSION["currentQuestion"] = 0;
           header("Location: /waiting",  true);
           exit;
         }
