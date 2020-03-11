@@ -434,12 +434,12 @@ if(!$isLoggedIn)
 {
 echo '<div class="notLoggedIn">';
 echo '<div class="userSessionHolder">';
-echo '<div class="logInHolder">';
+echo '<div class="logInHolder" onclick="goLogin();">';
 echo 'Log In';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goLogin() {';
-echo 'window.location = "login";';
+echo 'window.location = "../login";';
 echo '}';
 echo '</script>';
 echo '</div>';
@@ -449,7 +449,7 @@ echo 'Sign Up';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goRegister() {';
-echo 'window.location = "signup";';
+echo 'window.location = "../signup";';
 echo '}';
 echo '</script>';
 echo '</div>';
