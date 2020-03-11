@@ -1,6 +1,6 @@
 <?php
-  $path = $_SERVER['DOCUMENT_ROOT'];
   session_start();
+  $path = $_SERVER['DOCUMENT_ROOT'];
   if(isset($_SESSION["userData"]) && isset($_SESSION["isLoggedIn"]))
   {
       header("Location: ../");
@@ -42,7 +42,6 @@
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 echo '<title>Register | Quest Mode</title>';
 echo '';

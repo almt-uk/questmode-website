@@ -1,25 +1,18 @@
 <?php
   session_start();
-  if(isset($_POST['logout']))
+  if(!isset($_SESSION['isLoggedIn']) || !$_SESSION['isLoggedIn'])
   {
-    unset($_SESSION["isLoggedIn"]);
-    unset($_SESSION["userData"]);
-    session_destroy();
-    header("Refresh:0");
+    header("Location: ../",  true);
     exit;
   }
-?>
-
-<?php
-  $path = $_SERVER['DOCUMENT_ROOT'];
-  require_once $path . '/db_handler/web.php';
-  if(!isset($_SESSION['isLoggedIn']))
+  else if(isset($_SESSION["userData"]))
   {
-    $isLoggedIn = false;
-  }
-  else
-  {
-    $isLoggedIn = $_SESSION['isLoggedIn'];
+    $userData = json_decode($_SESSION["userData"]);
+    if(!$userData->is_teacher)
+    {
+        header("Location: ../",  true);
+        exit;
+    }
   }
 ?>
 
@@ -27,8 +20,9 @@
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+echo '<meta name="description" content="Log In to your ZeoFlow Account.">';
 echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-echo '<title>Quest Mode</title>';
+echo '<title>Manage Class | Quest Mode</title>';
 echo '<!-- Disable tap highlight on IE -->';
 echo '<meta name="msapplication-tap-highlight" content="no">';
 echo '<!-- Web Application Manifest -->';
@@ -39,10 +33,10 @@ echo '<meta name="application-name" content="ZeoFlow">';
 echo '<meta name="theme-color" content="#ffffff">';
 echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">';
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
-echo '<link rel="stylesheet" href="assets/style/cookieConsent.css" type="text/css">';
-echo '<link rel="stylesheet" href="assets/style/material.css" type="text/css">';
-echo '<link rel="stylesheet" href="assets/style/toolbar.css" type="text/css">';
-echo '<script src="assets/script/cookieConsent.js" type="text/javascript"></script>';
+echo '<link rel="stylesheet" href="../assets/style/cookieConsent.css" type="text/css">';
+echo '<link rel="stylesheet" href="../assets/style/material.css" type="text/css">';
+echo '<link rel="stylesheet" href="../assets/style/toolbar.css" type="text/css">';
+echo '<script src="../assets/script/cookieConsent.js" type="text/javascript"></script>';
 echo '<style>';
 echo 'img[alt="www.000webhost.com"] {';
 echo 'display: none !important;';
@@ -61,14 +55,12 @@ echo '}';
 echo 'a {';
 echo 'text-decoration:none';
 echo '}';
-echo '';
 echo '/* Prevent Resizing on Padding */';
 echo '* {';
 echo '-moz-box-sizing: border-box;';
 echo '-webkit-box-sizing: border-box;';
 echo 'box-sizing: border-box;';
 echo '}';
-echo '';
 echo '/* Website Content Holder */';
 echo '.contentHolder {';
 echo 'padding-top: 90px;';
@@ -82,23 +74,22 @@ echo 'padding-right: 160px;';
 echo '}';
 echo '.leftHolder {';
 echo 'float: left;';
-echo 'width: 70%;';
-echo '}';
-echo '.leftSubolder {';
-echo 'margin: 20px;';
-echo 'padding: 10px;';
-echo '}';
-echo '';
-echo '.rightHolder {';
-echo 'float: left;';
 echo 'width: 30%;';
 echo 'margin-top: -30px;';
 echo '}';
+echo '.leftSubolder {';
+echo 'margin-left: 30px;';
+echo 'margin-right: 15px;';
+echo '}';
+echo '.rightHolder {';
+echo 'float: left;';
+echo 'width: 70%;';
+echo 'margin-top: -30px;';
+echo '}';
 echo '.rightSubolder {';
-echo 'margin-left: 20px;';
+echo 'margin-left: 15px;';
 echo 'margin-right: 30px;';
 echo '}';
-echo '';
 echo '/* Join Game By Code */';
 echo '.quizzJoinHolder {';
 echo 'width: 100%;';
@@ -113,18 +104,24 @@ echo '}';
 echo '.quizzJoinHolder:hover {';
 echo '-webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));';
 echo 'filter: drop-shadow(0px 0px 5px rgb(102, 102, 102));';
-echo '';
 echo '}';
 echo '.quizzJoinTitle {';
 echo 'text-align: center;';
 echo 'font-weight: 900;';
-echo 'font-size: 18px;';
+echo 'font-size: 20px;';
 echo 'font-family: "PT Sans";';
 echo 'color: rgb(0, 0, 0);';
 echo '}';
+echo '.quizzCreateContent {';
+echo 'padding-top: 10px;';
+echo 'font-size: 18px;';
+echo 'font-family: "PT Sans";';
+echo 'color: rgb(0, 0, 0);';
+echo 'text-align: center;';
+echo '}';
 echo '.quizzJoinSubtitle {';
 echo 'padding-top: 10px;';
-echo 'font-size: 16px;';
+echo 'font-size: 18px;';
 echo 'font-family: "PT Sans";';
 echo 'color: rgb(0, 0, 0);';
 echo '}';
@@ -160,6 +157,37 @@ echo '-webkit-box-shadow: inset 0 0 10px #00000083;';
 echo 'box-shadow: inset 0 0 10px #00000083;';
 echo 'cursor: pointer;';
 echo '}';
+echo '/* Classes Holder Style */';
+echo '.classesHolder {';
+echo 'width: 100%;';
+echo 'padding: 20px;';
+echo 'margin-top: 10px;';
+echo 'padding-top: 14px;';
+echo 'padding-bottom: 14px;';
+echo 'background-color: #ebebeb;';
+echo 'border-radius: 10px;';
+echo '-webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.5));';
+echo 'filter: drop-shadow(0px 0px 1px rgb(92, 92, 92));';
+echo '}';
+echo '.classTitle {';
+echo 'font-size: 16px;';
+echo 'padding-left: 10px;';
+echo 'font-weight: 900;';
+echo 'font-family: "PT Sans";';
+echo 'color: rgb(0, 0, 0);';
+echo '}';
+echo '.classPeopleNo {';
+echo 'font-size: 18px;';
+echo 'font-family: "PT Sans";';
+echo 'color: rgb(0, 0, 0);';
+echo 'padding-top: 4px;';
+echo '}';
+echo '.classesHolder:hover {';
+echo 'cursor: pointer;';
+echo 'transform: scale(0.96);';
+echo '-webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));';
+echo 'filter: drop-shadow(0px 0px 4px rgb(92, 92, 92));';
+echo '}';
 echo '</style>';
 echo '</head>';
 ?>
@@ -168,37 +196,18 @@ echo '</head>';
 echo '<body>';
 echo '<div class="toolbarHolder toolbarShadow unselectable" id="toolbar">';
 echo '<div class="toolbarContent">';
-echo '<div class="titleToolbar">';
+echo '<div class="titleToolbar" onclick="goHome();">';
 echo 'Quest Mode';
 echo '</div>';
-echo '</div>';
-if(!$isLoggedIn)
-{
-echo '<div class="toolbarUserSessionHolder">';
-echo '<div class="toolbarUserSessionSignUp" onclick="goRegister();">';
-echo 'Sign Up';
-echo '</div>';
 echo '<script type="text/javascript">';
-echo 'function goRegister() {';
-echo 'window.location = "signup";';
-echo '}';
-echo '</script>';
-echo '<div class="toolbarUserSessionLogIn" onclick="goLogin();">';
-echo 'Log In';
-echo '</div>';
-echo '<script type="text/javascript">';
-echo 'function goLogin() {';
-echo 'window.location = "login";';
+echo 'function goHome() {';
+echo 'window.location = "../";';
 echo '}';
 echo '</script>';
 echo '</div>';
-}
-else
-{
 echo '<div class="userLoggedInHolder">';
 echo '<img class="userLoggedInPicture" src="https://firebasestorage.googleapis.com/v0/b/zeo-flow.appspot.com/o/ProfilePicturesLowQ%2F6jk6xzpHdrwB4kqok4xFDy2HrfobqKJeWRgOE470158261189.jpeg?alt=media" />';
 echo '</div>';
-}
 echo '</div>';
 echo '<div class="userLoggedInDetails hideElement" id="userLoggedInDetails">';
 echo '<div class="userLoggedInDetailsHolder unselectable">';
@@ -214,137 +223,110 @@ echo '</div>';
 echo '</div>';
 echo '<div class="profileHolder">';
 echo '<div class="userLoggedInOptions">';
-if($isLoggedIn)
-{
-if(isset($_SESSION["userData"]))
-{
-$userData = json_decode($_SESSION["userData"]);
-if(!$userData->is_teacher)
-{
-echo '<div class="userLoggedInOptionsItem" onclick="goJoinQuizz();">';
-echo 'Join Quizz';
-echo '</div>';
-echo '<script type="text/javascript">';
-echo 'function goJoinQuizz() {';
-echo 'window.location = "join";';
-echo '}';
-echo '</script>';
-}
-}
-}
 echo '<div class="userLoggedInOptionsItem">';
 echo 'Help & Support';
 echo '</div>';
-echo '<div class="userLoggedInOptionsItem" onclick="logout()">';
+echo '<div class="userLoggedInOptionsItem">';
 echo 'Log Out';
 echo '</div>';
-echo '<script>';
-echo 'function logout() {';
-echo '$.ajax({';
-echo 'type: "post",';
-echo 'data: {';
-echo 'ajax: 1,';
-echo 'logout: true';
-echo '},';
-echo 'success: function(response){';
-echo 'location.reload(true);';
-echo '}';
-echo '});';
-echo '}';
-echo '</script>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
-echo '';
-echo '<div class="contentHolder">';
+echo '<div class="contentHolder unselectable">';
 echo '<div class="contentSubholder">';
 echo '<div class="leftHolder">';
 echo '<div class="leftSubolder">';
-echo '';
-echo '</div>';
-echo '</div>';
-echo '<div class="rightHolder unselectable">';
-echo '<div class="rightSubolder">';
-if($isLoggedIn)
-{
-if(isset($_SESSION["userData"]))
-{
-$userData = json_decode($_SESSION["userData"]);
-if(!$userData->is_teacher)
-{
 echo '<div class="quizzJoinHolder">';
 echo '<div class="quizzJoinTitle">';
-echo 'Join Quizz';
+echo 'Create Class';
 echo '</div>';
 echo '<div class="quizzJoinSubtitle">';
-echo 'In case that you have a quizz code from your teacher, join it faster - no registration needed!';
-echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="goJoinQuizz();">';
-echo 'Join';
-echo '</div>';
-echo '</div>';
-echo '';
-echo '<div class="quizzJoinHolder">';
-echo '<div class="quizzJoinTitle">';
-echo 'University Rankings by Year';
-echo '</div>';
-echo '<div class="quizzJoinSubtitle">';
-echo '1. Name 14355 (LVL 54)';
-echo '</div>';
-echo '<div class="quizzJoinSubtitle">';
-echo '2. Name 14355 (LVL 52)';
-echo '</div>';
-echo '<div class="quizzJoinSubtitle">';
-echo '3. Name 14355 (LVL 23)';
-echo '</div>';
-echo '<div class="quizzJoinSubtitle">';
-echo '...';
-echo '</div>';
-echo '<div class="quizzJoinSubtitle">';
-echo '47. Name 143474575 (LVL 14)';
-echo '</div>';
-echo '</div>';
-}
-else
-{
-echo '<div class="quizzJoinHolder">';
-echo '<div class="quizzJoinTitle">';
-echo 'Manage Classes';
-echo '</div>';
-echo '<div class="quizzJoinSubtitle">';
-echo 'Add students to your classes, create quizzes for classes and view statistics for them.';
-echo '</div>';
-echo '<div class="quizzJoinBtn" onclick="goTeacherManage();">';
-echo 'Manage';
-echo '</div>';
-echo '<script type="text/javascript">';
-echo 'function goTeacherManage() {';
-echo 'window.location = "manage";';
-echo '}';
-echo '</script>';
-echo '</div>';
-echo '';
-echo '<div class="quizzJoinHolder">';
-echo '<div class="quizzJoinTitle">';
-echo 'Create Quizz';
-echo '</div>';
-echo '<div class="quizzJoinSubtitle">';
-echo 'Create a quizz for your students.';
+echo 'Do you want to create a new class?';
 echo '</div>';
 echo '<div class="quizzJoinBtn" onclick="goCreateQuizz();">';
 echo 'Create';
 echo '</div>';
 echo '<script type="text/javascript">';
 echo 'function goCreateQuizz() {';
-echo 'window.location = "create";';
+echo 'window.location = "../create_quizz";';
 echo '}';
 echo '</script>';
 echo '</div>';
-}
-}
-}
+echo '<div class="quizzJoinHolder">';
+echo '<div class="quizzJoinTitle">';
+echo 'Classes';
+echo '</div>';
+echo '<script type="text/javascript">';
+echo 'function goViewClass() {';
+echo 'window.location = "../class_view";';
+echo '}';
+echo '</script>';
+echo '<div class="classesHolder" onclick="goViewClass();">';
+echo '<div class="classTitle">';
+echo 'Databases 1';
+echo '</div>';
+echo '<div class="classPeopleNo">';
+echo '23 students';
+echo '</div>';
+echo '</div>';
+echo '<div class="classesHolder" onclick="goViewClass();">';
+echo '<div class="classTitle">';
+echo 'Game Techniques 1';
+echo '</div>';
+echo '<div class="classPeopleNo">';
+echo '10 students';
+echo '</div>';
+echo '</div>';
+echo '<div class="classesHolder" onclick="goViewClass();">';
+echo '<div class="classTitle">';
+echo 'Fundamentals of Computing System';
+echo '</div>';
+echo '<div class="classPeopleNo">';
+echo '43 students';
+echo '</div>';
+echo '</div>';
+echo '<div class="classesHolder" onclick="goViewClass();">';
+echo '<div class="classTitle">';
+echo 'Problem Solving and Programming';
+echo '</div>';
+echo '<div class="classPeopleNo">';
+echo '32 students';
+echo '</div>';
+echo '</div>';
+echo '<div class="classesHolder" onclick="goViewClass();">';
+echo '<div class="classTitle">';
+echo 'Video Games Architectures and Optimisation';
+echo '</div>';
+echo '<div class="classPeopleNo">';
+echo '43 students';
+echo '</div>';
+echo '</div>';
+echo '<div class="classesHolder" onclick="goViewClass();">';
+echo '<div class="classTitle">';
+echo '(BSc) Games Programming';
+echo '</div>';
+echo '<div class="classPeopleNo">';
+echo '43 students';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '<div class="rightHolder unselectable">';
+echo '<div class="rightSubolder">';
+echo '<div class="quizzJoinHolder">';
+echo '<div class="quizzJoinTitle">';
+echo 'Create Quizz';
+echo '</div>';
+echo '<div class="quizzCreateContent">';
+echo 'Do you want to create a new quizz?';
+echo '</div>';
+echo '<div class="quizzJoinBtn" onclick="window.open('../quizz/create.html', '_self');">';
+echo 'Create';
+echo '</div>';
+echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
