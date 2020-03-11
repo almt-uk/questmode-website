@@ -54,37 +54,6 @@
   $content4 = $questionOneDetails["content"];
   $is_right4 = $questionOneDetails["is_right"];
   $order_id4 = $questionOneDetails["order_id"];
-
-  $path = $_SERVER['DOCUMENT_ROOT'];
-  if(isset($_POST['pick_answer']) && $_POST['pick_answer']) {
-    if(isset($_POST['answer'])) {
-        $answer=$_POST['answer'];
-        require_once $path . '/db_handler/web.php';
-        $db = new DbHandlerWeb();
-        $db->initializeAPI("xtoAkWqVGp4nDtW6tZL1AaJUCl9I3tYcqjfTBhSu", "PHZ7dh4vHtbJoF7kD2RtZQUxi3opTFeXvpa0Jp7R");
-        if($answer == 1)
-        {
-            $answer_id = $answer_id1;
-        }
-        else if($answer == 2)
-        {
-            $answer_id = $answer_id2;
-        }
-        else if($answer == 3)
-        {
-            $answer_id = $answer_id3;
-        }
-        else if($answer == 4)
-        {
-            $answer_id = $answer_id4;
-        }
-        $db->answerQuestion($quizz_session_id, $answer_id, $question_id);
-        $_SESSION["answerChose"] = $answer;
-        exit;
-    } else {
-        exit;
-    }
-  }
   
 ?>
 
