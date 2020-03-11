@@ -35,7 +35,9 @@
         $joinQuizz = $db->joinQuizz($quizzCode, $quizzNickname);
         if(!$joinQuizz["error"])
         {
-          $_SESSION["isLoggedIn"] = true;
+          $_SESSION["questionRowsData"] = $joinQuizz["questionRowsData"];
+          $_SESSION["session_id"] = $joinQuizz["session_id"];
+          $_SESSION["quizzData"] = $joinQuizz["quizzData"];
         }
         exit;
     } else {
