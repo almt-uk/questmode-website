@@ -39,9 +39,6 @@
 ?>
 
 <?php
-?>
-
-<?php
 echo '<head>';
 echo '<meta charset="utf-8">';
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
