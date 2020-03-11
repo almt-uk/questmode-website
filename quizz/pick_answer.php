@@ -284,7 +284,7 @@ echo '<div>To help personalise content and provide a safer experience, we use co
 echo '</div>';
 echo '</body>';
 echo '<script>';
-echo 'var time = 12;';
+echo 'var time = ' . $time_answer . ';';
 echo 'var choice = 0;';
 echo 'document.getElementById("countdownTime").innerHTML = time + "s";';
 echo 'setInterval(function() {';
