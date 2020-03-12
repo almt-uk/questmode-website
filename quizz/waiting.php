@@ -25,7 +25,7 @@
         if(isset($_SESSION["userData"]))
         {
             $userData = json_decode($_SESSION["userData"]);
-            if(!$userData->is_teacher)
+            if($userData->is_teacher)
             {
                 header("Location: ../",  true);
                 exit;
@@ -33,7 +33,7 @@
         }
     }
   }
-  if(isset($_SESSION["quizzSessionID"]))
+  if(!isset($_SESSION["quizzSessionID"]))
   {
     header("Location: ../",  true);
     exit;
